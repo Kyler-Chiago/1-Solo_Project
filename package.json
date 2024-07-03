@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --hot --progress",
+    "start": "nodemon server/server.js",
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --hot --progress --color\" \"nodemon server/server.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,13 +21,29 @@
     "@babel/preset-env": "^7.24.7",
     "@babel/preset-react": "^7.24.7",
     "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
+    "nodemon": "^3.1.4",
+    "style-loader": "^4.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^8.2.2",
+    "cookie-parser": "^1.4.6",
+    "cross-env": "^7.0.3",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
+    "mongoose": "^8.4.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.24.0",
+    "redux": "^5.0.1"
   }
 }

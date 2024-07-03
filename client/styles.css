@@ -1,0 +1,899 @@
+body {
+  /* top: 0px; */
+  /* left: 0px; */
+  margin: 0;
+  background-color: rgb(49, 49, 49);
+  /* background-color: rgb(49, 49, 49); */
+  /* background-image: url('../docs/assets/images/anime-night-digital-art-hd-landscape_1920x1080.jpg'); */
+  /* background-image: url('../docs/assets/images/milky-way-2695569_1920.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%; */
+  /* height: 100%; */
+  /* overflow: ; */
+}
+
+.wrapper {
+  background-color: rgb(14, 11, 66);
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px grey;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(54, 56, 58);
+}
+
+.page1 {
+  /* formatted for 96ppi for a 8.5"x11" paper */
+  width: 816px;
+  height: 1056px;
+  /* background-image: url('../docs/assets/images/anime-night-digital-art-hd-landscape_1920x1080.jpg'); */
+  /* background-image */
+  /* background-image: url('https://wherethewindsblow.com/wp-content/uploads/2015/04/Translucent-4-Sided-Dice-set-of-2-Purple.jpg'); */
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page1Margin {
+  margin: auto;
+  /* Width and Height set to provide 7mm margins */
+  width: calc(100%*763/816);
+  height: calc(100%*1003/1056);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ---page1Header--- */
+
+.page1Header {
+  width: 100%;
+  height: 150px;
+  background-color: aqua;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100%;
+}
+
+.characterName {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: red;
+}
+
+.characterBasics {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: rgb(58, 148, 74);
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  grid-template-rows: 50% 50%;
+}
+
+.classLevel {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: rgb(10, 27, 13);
+}
+
+.background {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: rgb(163, 215, 172);
+}
+
+.playerName {
+  grid-row: 1;
+  grid-column: 3;
+  background-color: rgb(81, 136, 90);
+}
+
+.race {
+  grid-row: 2;
+  grid-column: 1;
+  background-color: rgb(34, 134, 27);
+}
+
+.alignment {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: rgb(71, 185, 141);
+}
+
+.exp {
+  grid-row: 2;
+  grid-column: 3;
+  background-color: rgb(103, 116, 111);
+}
+
+/* ---mainBlock--- */
+
+.mainBlock {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  grid-auto-rows: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+/* ---leftBlock--- */
+
+.leftBlock {
+  border-bottom-left-radius: 20px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: calc(2*100%/3) calc(100%/3);
+}
+
+.leftBlockRow {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% * 2 / 3);
+  grid-template-rows: 100%;
+}
+
+.statColumn {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(6, calc(100% / 6));
+}
+
+.stat {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 50% 10% 10%;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.statBorder {
+  grid-row: 1/4;
+  grid-column: 1;
+  border: 2px solid rgb(39, 0, 157);
+  border-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.ability {
+  grid-row: 1;
+  grid-column: 1;
+  border: 2px solid rgb(39, 0, 157);
+  color: rgb(197, 238, 255);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+
+  /* Useful if I have overflow, but commented out since it messed with vertical align */
+  /* text-wrap: nowrap; */
+  /* white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden; */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.abilityModifier {
+  grid-row: 2;
+  grid-column: 1;
+  text-align: center;
+  margin: auto;
+  font-size: 24px;
+  color: aqua;
+}
+
+.abilityScoreBox {
+  grid-row: 3/5;
+  grid-column: 1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 100%;
+}
+
+
+.abilityScore {
+  grid-column: 2;
+  grid-row: 1;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  background-color: blue;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.strengthAbilityInput {
+  background-color: blue;
+  /* opacity: 0; */
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  border: 0px;
+  outline: none;
+  /* margin: 1px; */
+  text-align: center;
+
+}
+
+/* ---skills--- */
+
+.skills {
+  grid-column: 2;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+}
+
+.inspirationBlock {
+  width: 100%;
+  height: 50px;
+  /* background-color: red; */
+  display: grid;
+  /* set to be equal to the height to make a square */
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 100%;
+}
+
+.inspirationCheck {
+  grid-column: 1;
+  grid-row: 1;
+  /* background-color: teal; */
+  border: 2px solid rgb(39, 0, 157);
+  /* top right bottom left */
+  margin: 2px 1px 2px 3px;
+}
+
+#inspirationButton {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 195, 255);
+  opacity: 0;
+}
+
+.inspirationText {
+  grid-column: 2;
+  grid-row: 1;
+  /* background-color: rgb(73, 157, 157); */
+  border: 2px solid rgb(39, 0, 157);
+  margin: 2px 2px 2px -1px;
+  color: rgb(197, 238, 255);
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profBonusBlock {
+  width: 100%;
+  height: 50px;
+  /* background-color: rgb(0, 120, 28); */
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 100%;
+}
+
+.profCheck {
+  grid-column: 1;
+  grid-row: 1;
+  /* background-color: teal; */
+  border: 2px solid rgb(39, 0, 157);
+  /* top right bottom left */
+  margin: 2px 1px 2px 3px;
+}
+
+.profCheckInput {
+  width: 100%; 
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0);
+  color: rgb(197, 238, 255);
+  outline: none;
+  text-align: center;
+  font-size: 20px;
+  /* height: 100%; */
+}
+
+
+.profText {
+  grid-column: 2;
+  grid-row: 1;
+  /* background-color: rgb(73, 157, 157); */
+  border: 2px solid rgb(39, 0, 157);
+  margin: 2px 2px 2px -1px;
+  color: rgb(197, 238, 255);
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.savingThrowsBlock {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(6, 14%) 1fr; 
+}
+
+.strengthST {
+  grid-column: 1;
+  grid-row: 1;
+  /* background-color:rgb(0, 0, 0); */
+  margin: 0px 2px 0px 3px;
+  border: 2px solid rgb(39, 0, 157);
+  border-bottom: 0px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.charismaST {
+  grid-column: 1;
+  grid-row: 6;
+  /* background-color:rgb(0, 0, 0); */
+  margin: 0px 2px 0px 3px;
+  border: 2px solid rgb(39, 0, 157);
+  border-top: 0px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.STButtonBorder {
+  width: 12px;
+  /* height: 100%; */
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(77, 77, 77);
+  border-radius: 10px;
+  /* background-color: rgb(124, 124, 124); */
+}
+
+.STButtonBorder:hover {
+  background-color: rgb(0, 195, 255);
+  opacity: 0.7;
+}
+
+#strengthSTButton, #dexteritySTButton, #constitutionSTButton, #intelligenceSTButton, #wisdomSTButton, #charismaSTButton {
+  background-color: rgb(0, 195, 255);
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: 0px;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.strengthSTInput, .dexteritySTInput, .constitutionSTInput, .intelligenceSTInput, .wisdomSTInput, .charismaSTInput {
+  margin-left: 5px;
+  width: 12%;
+  /* height: 12px; */
+  height: 100%;
+  background-color: rgba(0,0,0,0);
+  color: rgb(197, 238, 255);
+  outline: none;
+  /* border: 0px; */
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  box-sizing: border-box;
+  border-color:black;
+  text-align: center;
+  margin-right: 5px;
+  /* border-bottom: 1px; */
+}
+
+.STText {
+  /* grid-column: 2; */
+  /* grid-row: 1; */
+  /* background-color: rgb(73, 157, 157); */
+  /* border: 2px solid rgb(39, 0, 157); */
+  /* margin: 2px 2px 2px -1px; */
+  color: rgb(197, 238, 255);
+  font-size: 13px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.midST {
+  grid-column: 1;
+  /* background-color:rgb(0, 0, 0); */
+  margin: 0px 2px 0px 3px;
+  border: 2px solid rgb(39, 0, 157);
+  border-top: 0px;
+  border-bottom: 0px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.dexerityST {
+  grid-row: 2;
+}
+
+.conST {
+  grid-row: 3;
+}
+
+.intelligenceST {
+  grid-row: 4;
+}
+
+.wisdomST {
+  grid-row: 5;
+}
+
+.charismaST {
+  grid-column: 1;
+  grid-row: 6;
+  /* background-color:rgb(0, 0, 0); */
+  border: 2px solid rgb(39, 0, 157);
+  margin: 0px 2px 0px 3px;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+
+.savingThrowsST {
+  grid-column: 1;
+  grid-row: 7;
+  /* background-color:rgb(167, 0, 0); */
+  border: 2px solid rgb(39, 0, 157);
+  margin: 0px 2px 2px 3px;
+  border-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(197, 238, 255);
+  font-size: 14px;
+}
+
+/* .savingThrowsSTText {
+
+} */
+
+.skillsBlock {
+  width: 100%;
+  /* height: 100%; */
+  flex-grow: 1;
+  background-color: red;
+}
+
+.l3 {
+  background-color: rgb(148, 41, 41);
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+}
+
+.l3PW {
+  background-color: rgb(184, 129, 129);
+}
+
+.l3OPaL {
+  background-color: rgb(130, 65, 65);
+}
+
+/* ---centerBlock--- */
+
+.centerBlock {
+  flex: 1;
+  /* background-color: yellow; */
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cB1 {
+  width: 100%;
+  flex: 1;
+  background-color: rgb(49, 49, 49);
+}
+
+.cB2 {
+  width: 100%;
+  flex: 1;
+  background-color: rgb(71, 180, 111);
+}
+
+.cB3 {
+  width: 100%;
+  flex: 1;
+  background-color: rgb(97, 60, 60);
+}
+
+/* ---rightBlock--- */
+
+.rightBlock {
+  flex: 1;
+  /* background-color: green; */
+  border-bottom-right-radius: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rB1 {
+  width: 100%;
+  flex: 1;
+  background-color: rgb(49, 49, 49);
+}
+
+.rB2 {
+  width: 100%;
+  flex: 2;
+  background-color: rgb(71, 180, 111);
+}
+
+
+/* ------Login------ */
+.centerLogin {
+  position: fixed;
+  inset: 0px;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  /* background-color:black; */
+  /* background-image: url('../docs/assets/images/15922742b6ef2adc93919d64efed753f.png'); */
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10% calc(80%/3) calc(80%/3) calc(80%/3) 10%;
+  border: 2px solid rgb(0, 0, 0);
+
+}
+
+.loginImageContainer {
+  grid-column: 1/4;
+  grid-row: 1/6;
+  height: 100%;
+  width: 100%;
+  /* background-color:rgb(34, 134, 27); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+.loginImage {
+  /* flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100% */
+  width: 100%;
+  height: 100%;
+}
+
+.loginInnerBorder {
+  grid-column: 2;
+  grid-row: 2/5;
+  border: 2px solid rgb(255, 255, 255);
+  /* background-color:black; */
+}
+
+.loginHeader {
+  grid-column: 2;
+  grid-row: 2;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  cursor: default;
+  /* border: 2px solid rgb(0, 0, 0); */
+}
+
+.userPass {
+    grid-column: 2;
+    grid-row: 3/5;
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(151, 151, 113); */
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 0% calc(80%/3) calc(80%/3) calc(80%/3) 20%;
+}
+
+.userForm {
+  grid-column: 2;
+  grid-row: 2/5;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
+}
+
+.loginSignUpButton {
+  border-radius: 5px;
+  background-color:black;
+  color: white;
+  /* margin-top: 50%; */
+  /* padding-top: 50%; */
+  width: fit-content;
+  height: 50%;
+}
+
+.userFormUserName {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+}
+
+.userFormPassWord {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+}
+
+.loginButtonSpace {
+    grid-column: 2;
+    grid-row: 4;
+    /* background-color: rgb(0, 0, 0); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.loginButtonStyle { /* Login */
+  width: 80%;
+  height: 80%;
+  opacity: 1;
+  background-color: rgb(0, 164, 164);
+  border-radius: 10px;
+}
+
+.loginButtonStyle:hover {
+  opacity: 0.8;
+}
+
+.opacity0_8:hover { 
+ opacity: 0.8;
+}
+
+.loginButtonStyle2 { /* Signup */
+  width: 20%;
+  /* height: 80%; */
+  border-radius: 7px;
+  background-color: teal;
+}
+
+.loginButtonStyle2:hover {
+  opacity: 0.8;
+}
+
+.usertag {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: end;
+  padding-bottom: 2px;
+  cursor: default;
+  /* text-align: center; */
+}
+
+.userName {
+  grid-column: 1;
+  grid-row: 2;
+  opacity: 0.5;
+  /* width: 100%;
+  height: 100%; */
+  background-color: teal;
+  border-radius: 5px;
+}
+
+.userName:hover, .userName:not(:placeholder-shown), .passWord:hover, .passWord:not(:placeholder-shown){
+  opacity: 0.8;
+}
+
+.userFormSignUp {
+  grid-column: 2;
+  grid-row: 5;
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.passwordtag {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: end;
+  padding-bottom: 2px;
+  /* cursor: pointer; */
+  cursor: default;
+}
+
+.passWord {
+  grid-column: 1;
+  grid-row: 2;
+  opacity: 0.5;
+  background-color: rgb(130, 176, 176);
+  border-radius: 5px;
+}
+
+.userFormsignUpButton {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUpButton {
+  /* grid-column: 2;
+  grid-row: 1;
+  width: 90%;
+  height: 90%; */
+  /* padding: 10px; */
+  /* margin-top: 10px;
+  margin-bottom: 20px; */
+  grid-column: 1;
+  grid-row: 3;
+  border-radius: 5px;
+  background-color:black;
+  color: white;
+  /* margin-top: 50%; */
+  /* padding-top: 50%; */
+  height: 50%;
+}
+
+/* -----Home----- */
+
+.homeWrapper {
+  width: 100%;
+  height: 100%;
+  background-color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeHeader {
+  width:100%;
+  height: 200px;
+  background-color: rgb(24, 0, 65);
+  color: teal;
+  display: grid;
+  grid-template-columns: 1fr calc(750px/3) calc(750px/3) calc(750px/3) 1fr;
+  grid-template-rows: 10% 80% 10%;
+}
+
+.homeHeaderBanner {
+  grid-column: 1/6;
+  grid-row: 2;
+  background-color:rgb(0, 26, 110);
+}
+
+.homeLeft {
+  grid-column: 2;
+  grid-row: 2;
+  background-color:rgb(0, 164, 164);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeLogo {
+  grid-column: 3;
+  grid-row: 2;
+  background-color:rgb(19, 87, 87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeLogout {
+  grid-column: 4;
+  grid-row: 2;
+  background-color:rgb(29, 36, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homednd5elogo {
+  width: 100px;
+  height: 100px;
+  /* margin: auto; */
+}
+
+.homeMainContainer {
+  width: 750px;
+  height: 1000px;
+  background-color:rgb(0, 34, 63);
+  display: grid;
+  grid-template-columns: 10px 2fr 1fr 10px;
+  grid-template-rows: 10px 1fr 1fr 1fr 10px
+}
+
+.homeCharacterContainer {
+  grid-column: 3;
+  grid-row: 2/5;
+  background-color:aqua;
+  display: grid;
+  grid-template-columns: 10px 1fr 10px;
+  grid-template-rows: 40px 1fr 10px;
+}
+
+.homeCharacterScroll {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: red;
+}
+
+.homeCharacterButton {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createCharacterButton {
+  /* grid-column: 2;
+  grid-row: 1;
+  width: 90%;
+  height: 90%; */
+  /* padding: 10px; */
+  /* margin-top: 10px;
+  margin-bottom: 20px; */
+  border-radius: 5px;
+  background-color:black;
+  color: white;
+}
+
+.createCharacterButton:hover {
+  opacity: 50%;
+}
