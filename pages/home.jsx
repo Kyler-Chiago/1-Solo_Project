@@ -1,14 +1,9 @@
 // import { useNavigate } from "react-router-dom"
 import React from 'react'
 import dnd5elogo from '../docs/assets/images/dnd5elogo.png'
+import HomeCharacterSection from '../components/HomeCharacterSection.jsx'
 
 const Home = () => {
-    // let navigate = useNavigate();
-
-    // const redirectLogin = () => {
-    //     let path = '/';
-    //     navigate(path);
-    // };
     return (
         <div className="homeWrapper">
             <div className="homeHeader">
@@ -25,6 +20,9 @@ const Home = () => {
                     <form action='/logout' method='POST'>
                         <input type='submit' value="Logout" className="createCharacterButton"></input>
                     </form>
+                    <form action='/deleteAllCharacters' method='POST'>
+                        <input type='submit' value="Delete All Characters" className="createCharacterButton"></input>
+                    </form>
                     {/* <button onClick={redirectLogin}>Logout</button> */}
                 </div>
             </div>
@@ -37,7 +35,7 @@ const Home = () => {
                         </form>
                     </div>
                     <div className="homeCharacterScroll">
-
+                        <HomeCharacterSection/>
                     </div>
                 </div>
             </div>

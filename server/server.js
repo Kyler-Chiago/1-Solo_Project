@@ -9,6 +9,8 @@ const userController = require('./controllers/userController');
 const cookieController = require('./controllers/cookieController');
 const sessionController = require('./controllers/sessionController');
 const characterController = require('./controllers/characterController');
+
+const url = require('url');
 // var fs = require('fs');
 
 const mongoURI = process.env.NODE_ENV === 'test' ? 'mongodb://localhost/soloProjecttest' : 'mongodb://localhost/soloProjectdev';
@@ -25,6 +27,8 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 app.use(express.static('../dist'));
+// app.use(express.static('../docs'));
+
 
 app.post('/', (req,res) => {
   res.redirect('/')
@@ -37,7 +41,7 @@ app.post('/logout', (req,res) => {
 app.post('/saveCharacter', characterController.createCharacter, (req, res) => {
   // what should happen here on successful sign up?
   // res.status(200).json({message: 'user sign up successful'});
-  return res.redirect('/charactersPage');
+  return res.status(200);
 });
 
 app.post('/login', userController.verifyUser, sessionController.startSession, cookieController.setSSIDCookie, (req,res) => {
@@ -57,7 +61,8 @@ app.post('/character', (req,res) => {
 })
 
 app.get('/character', (req, res) => {
-  console.log('Help Character');
+  // console.log('Help Character');
+  // const characterIdTest = req.query.valid;
   return res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
@@ -128,6 +133,34 @@ app.get('/home', characterController.getAllCharacters, (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 // });
 
+app.post('/deleteAllCharacters', characterController.deleteAllCharacters, (req, res) => {
+  return res.redirect('/home');
+})
+
+app.post('/getCharacter', characterController.getCharacter, (req, res) => {
+  // res.send( { character: res.locals.character });
+  // console.log(res.locals.character._id);
+  const resChar = res.locals.character._id.toString();
+  // console.log('resChar: ', resChar);
+  res.redirect(url.format({
+    pathname: "/character",
+    query: {
+      "char": resChar,
+    }
+    // "test": resChar,
+    // query: {
+    //   "/":resChar,
+    // }
+  }))
+})
+
+app.post('/getThisCharacter', characterController.getCharacter, (req, res) => {
+  // console.log('in /getThisCharacter: ', res.locals.character._id);
+  console.log('in /getThisCharacter');
+  return res.send(res.locals.character);
+  // const thisResChar = res.locals.character
+})
+
 app.get('/usersPage', userController.getAllUsers, (req, res) => {
   res.send( { users: res.locals.users });
 })
@@ -136,6 +169,10 @@ app.get('/charactersPage', characterController.getAllCharacters, (req, res) => {
   res.send( { characters: res.locals.characters });
 })
 
+app.get('/charactersList', characterController.getAllCharacters, (req, res) => {
+  // console.log('')
+  return res.send(res.locals.characters);
+})
 
 /**
  * 404 handler
