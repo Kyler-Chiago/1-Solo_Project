@@ -7,44 +7,33 @@ const characterController = {};
  */
 characterController.createCharacter = async (req, res, next) => {
   // write code here
-  console.log(req.body);
+  // console.log(req.body);
+  // Destructuring and setting a default value if it's undefined
   const {
-    charName,
-    strAbi,
-    profBon,
-    strSav,
-    dexSav,
-    conSav,
-    intSav,
-    wisSav,
-    chaSav,
-    charLev,
-    charBack,
-    player,
-    race,
-    align,
-    exp,
-    charClass,
-    dexAbi,
-    conAbi,
-    intAbi,
-    wisAbi,
-    chaAbi,
-    strMod,
+    charName = '',
+    strAbi = '',
+    profBon = '',
+    strSav = '',
+    dexSav = '',
+    conSav = '',
+    intSav = '',
+    wisSav = '',
+    chaSav = '',
+    charLev = '',
+    charBack = '',
+    player = '',
+    race = '',
+    align = '',
+    exp = '',
+    charClass = '',
+    dexAbi = '',
+    conAbi = '',
+    intAbi = '',
+    wisAbi = '',
+    chaAbi = '',
+    strMod = '',
   } = req.body;
-  // if(!strAbi || !profBon || !strSav || !dexSav || !conSav || !intSav || !wisSav || !chaSav){
-  //   // Make sure error message uses capital E for error
-  //   return next({
-  //     log: 'Missing info in characterController.createCharacter',
-  //     status: 400,
-  //     message: { err: 'An Error occurred' },
-  //   });
-  // }
   try {
-    // console.log({username, password});
-    // console.log({username: username, password: password})
-    //   const character = await Character.create({username: username, password: password});
-    // console.log('hello')
     const character = await Character.create({
       charName,
       strAbi,
@@ -108,6 +97,86 @@ characterController.getCharacter = async (req, res, next) => {
     });
   }
 };
+
+characterController.updateCharacter = async (req, res, next) => {
+  const {
+    charName = '',
+    strAbi = '',
+    profBon = '',
+    strSav = '',
+    dexSav = '',
+    conSav = '',
+    intSav = '',
+    wisSav = '',
+    chaSav = '',
+    charLev = '',
+    charBack = '',
+    player = '',
+    race = '',
+    align = '',
+    exp = '',
+    charClass = '',
+    dexAbi = '',
+    conAbi = '',
+    intAbi = '',
+    wisAbi = '',
+    chaAbi = '',
+    strMod = '',
+  } = req.body;
+
+  console.log('req.body: ', req.body)
+  try {
+    let id;
+    if (req.body.charId) {
+      id = req.body.charId // for the post request in characterSheet
+    } else {
+      id = req.body; // for the form post request in other stuff
+    }
+    console.log('id before Character.updateOne: ', id);
+    const character = await Character.findOne({_id: id});
+    console.log('character before update: ', character);
+
+    await Character.updateOne(
+      { _id: id},
+      {$set: {
+      charName,
+      strAbi,
+      profBon,
+      strSav,
+      dexSav,
+      conSav,
+      intSav,
+      wisSav,
+      chaSav,
+      charLev,
+      charBack,
+      player,
+      race,
+      align,
+      exp,
+      charClass,
+      dexAbi,
+      conAbi,
+      intAbi,
+      wisAbi,
+      chaAbi,
+      strMod,
+    }});
+    character = await Character.findOne({_id: id});
+    console.log('character after update: ', character);
+      console.log('there')
+      console.log('id after update: ', id)
+    res.locals.characterid = id;
+    console.log("res.locals.characterid: ", res.locals.characterid);
+    return next();
+  } catch (err) {
+    return next({
+      log: 'Error occurred in characterController.createCharacter.',
+      status: 500,
+      message: { err: 'An error occured' },
+    });
+  }
+}
 
 characterController.getAllCharacters = async (req, res, next) => {
   // console.log('in characterController.getAllCharacters from /charactersList');

@@ -156,9 +156,41 @@ app.post('/getCharacter', characterController.getCharacter, (req, res) => {
 
 app.post('/getThisCharacter', characterController.getCharacter, (req, res) => {
   // console.log('in /getThisCharacter: ', res.locals.character._id);
-  console.log('in /getThisCharacter');
+  // console.log('in /getThisCharacter');
   return res.send(res.locals.character);
   // const thisResChar = res.locals.character
+})
+
+app.post('/updateCharacter', characterController.updateCharacter, (req, res) => {
+  console.log('after updateCharacter');
+  const resChar = res.locals.characterid.toString();
+  res.redirect(url.format({
+    pathname: "/character",
+    query: {
+      "char": resChar,
+    }
+    // "test": resChar,
+    // query: {
+    //   "/":resChar,
+    // }
+  }))
+  // return res.status(200);
+  // return res.send('after updateCharacter');
+})
+
+app.post('/newCharacterTest', characterController.createCharacter, (req, res) => {
+  const resChar = res.locals.character._id.toString();
+  // console.log('resChar: ', resChar);
+  res.redirect(url.format({
+    pathname: "/character",
+    query: {
+      "char": resChar,
+    }
+    // "test": resChar,
+    // query: {
+    //   "/":resChar,
+    // }
+  }))
 })
 
 app.get('/usersPage', userController.getAllUsers, (req, res) => {

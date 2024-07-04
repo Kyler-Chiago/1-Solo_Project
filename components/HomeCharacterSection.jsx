@@ -16,10 +16,14 @@ const HomeCharacterSection = () => {
         characters()
     }, []);
 
+    // console.log('charactersList: ', charactersList);
+
     // These two if checks basically make the return wait until useEffect has updated characters
     // to the returned data 
     if (typeof charactersList[0] === 'object') {
+        // console.log('charactersList: ', charactersList);
         if (charactersList[0].strAbi || typeof charactersList[0].strAbi === "string") {
+            // console.log('charactersList: ', charactersList);
             const charactersArray = [];
             for (let i = 0; i < charactersList.length; i++) {
                 charactersArray.push(
@@ -36,6 +40,7 @@ const HomeCharacterSection = () => {
                     />
                 );
             }
+            // console.log('charactersArray: ', charactersArray);
             return (
                 <div className = "homeCharactersContainerReal">
                     { charactersArray }

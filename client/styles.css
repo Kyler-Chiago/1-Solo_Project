@@ -318,6 +318,7 @@ body {
   border: 2px solid rgb(39, 0, 157);
   /* top right bottom left */
   margin: 2px 1px 2px 3px;
+  background-color: rgba(0,0,0,0.5);
 }
 
 #inspirationButton {
@@ -338,6 +339,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .profBonusBlock {
@@ -356,6 +358,7 @@ body {
   border: 2px solid rgb(39, 0, 157);
   /* top right bottom left */
   margin: 2px 1px 2px 3px;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .profCheckInput {
@@ -382,6 +385,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0,0,0,0.5);
 }
 
 
@@ -403,6 +407,7 @@ body {
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .charismaST {
@@ -415,6 +420,7 @@ body {
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .STButtonBorder {
@@ -487,6 +493,7 @@ body {
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .dexerityST {
@@ -527,6 +534,7 @@ body {
   align-items: center;
   color: rgb(197, 238, 255);
   font-size: 14px;
+  background-color: rgba(0,0,0,0.5);
 }
 
 /* .savingThrowsSTText {

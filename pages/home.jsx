@@ -33,6 +33,9 @@ const Home = () => {
                         <form action='/character' method='POST'>
                             <input type='submit' value="Create Character" className="createCharacterButton"></input>
                         </form>
+                        <form action='/newCharacterTest' method='POST'>
+                            <input type='submit' value="New Character Test" className="createCharacterButton"></input>
+                        </form>
                     </div>
                     <div className="homeCharacterScroll">
                         <HomeCharacterSection/>

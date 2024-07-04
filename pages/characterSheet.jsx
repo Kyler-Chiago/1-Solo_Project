@@ -17,11 +17,15 @@ const CharacterSheet = () => {
     // }, []);
 
     const urlSearch = window.location.search;
+    const charIdTest = new URLSearchParams(urlSearch);
+    // console.log('charIdTest: ', charIdTest);
+    const charId = charIdTest.get("char");
+    // console.log('charId: ', charId);
     if (urlSearch.length !== 0) {
         // console.log('urlSearch: ', urlSearch);
         // console.log(typeof urlSearch);
-        const charIdTest = new URLSearchParams(urlSearch);
-        const charId = charIdTest.get("char");
+        // const charIdTest = new URLSearchParams(urlSearch);
+        // const charId = charIdTest.get("char");
         // console.log('characterSheet1 charId: ', charId);
 
         const [characterData, setCharacters] = useState([]);
@@ -48,6 +52,7 @@ const CharacterSheet = () => {
         // console.log('charId4: ', charId);
 
         if (Object.keys(characterData).length !== 0 && characterData.constructor === Object) {
+            
             // console.log('characterData: ', characterData);
             // console.log(typeof characterData);
 
@@ -88,7 +93,7 @@ const CharacterSheet = () => {
 
             let intAbi = document.getElementById("intAbi");
             intAbi.value = characterData.intAbi;
-            
+
             let wisAbi = document.getElementById("wisAbi");
             wisAbi.value = characterData.wisAbi;
             // let textFill = document.getElementById("chaSav");
@@ -144,6 +149,9 @@ const CharacterSheet = () => {
                                 </form>
                                 <form action='/saveCharacter' method='POST' id="saveCharacter">
                                     <input type='submit' value="Save Character" className="createCharacterButton"></input>
+                                </form>
+                                <form action='/updateCharacter' method='POST' id="updateCharacter">
+                                    <button name="_id" type="submit" value={charId} >Update Character</button>
                                 </form>
                                 <span>Character Name:</span>
                                 <input name="charName" type="text" placeholder="" className="profCheckInput" form="saveCharacter" id="charName"></input>
@@ -259,7 +267,7 @@ const CharacterSheet = () => {
                                         </div>
                                         <div className="abilityScoreBox">
                                             <div className="abilityScore">
-                                            <input name="wisAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="wisAbi"></input>
+                                                <input name="wisAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="wisAbi"></input>
                                             </div>
                                         </div>
                                     </div>
@@ -275,7 +283,7 @@ const CharacterSheet = () => {
                                         </div>
                                         <div className="abilityScoreBox">
                                             <div className="abilityScore">
-                                            <input name="chaAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="chaAbi"></input>
+                                                <input name="chaAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="chaAbi"></input>
                                             </div>
                                         </div>
                                     </div>
