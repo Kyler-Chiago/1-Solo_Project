@@ -27,6 +27,7 @@ const HomeCharacterSingle = props => {
                 {/* <form method="post">
                     <input type="submit" value={charId}></input>
                 </form> */}
+                {/* Class: {charClass} */}
                 <form action='/getCharacter' method='POST'>
                     <button name="_id" type="submit" value={charId}>get this</button>
                     {/* <input type='submit' value={charId} placeholder="" className="createCharacterButton"></input> */}

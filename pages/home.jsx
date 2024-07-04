@@ -30,11 +30,11 @@ const Home = () => {
                 <div className="homeCharacterContainer">
                     {/* <button onClick={redirectCharacter} className="createCharacterButton">Create Character</button> */}
                     <div className="homeCharacterButton">
-                        <form action='/character' method='POST'>
+                        {/* <form action='/character' method='POST'>
                             <input type='submit' value="Create Character" className="createCharacterButton"></input>
-                        </form>
-                        <form action='/newCharacterTest' method='POST'>
-                            <input type='submit' value="New Character Test" className="createCharacterButton"></input>
+                        </form> */}
+                        <form action='/createCharacter' method='POST'>
+                            <input type='submit' value="Create Character" className="createCharacterButton"></input>
                         </form>
                     </div>
                     <div className="homeCharacterScroll">

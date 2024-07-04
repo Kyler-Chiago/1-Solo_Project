@@ -83,7 +83,7 @@ app.get('/', (req, res) => {
 // });
 
 app.get('/signup', (req,res) => {
-  console.log('Help Signup');
+  // console.log('Help Signup');
   return res.sendFile(path.resolve(__dirname, '../client/index.html'));
 })
 /**
@@ -106,7 +106,7 @@ app.get('/what', (req, res) => {
 });
 
 app.get('/home', characterController.getAllCharacters, (req, res) => {
-  console.log('Help Home');
+  // console.log('Help Home');
   return res.sendFile(path.resolve(__dirname, '../client/index.html'));
   // return res.sendFile(path.resolve(__dirname, '../client/index.html'));
   // res.status(404).send('Not Found');
@@ -132,6 +132,10 @@ app.get('/home', characterController.getAllCharacters, (req, res) => {
 // app.get('/usersPage', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 // });
+
+app.post('/deleteCharacter', characterController.deleteCharacter, (req, res) => {
+  return res.redirect('/home');
+})
 
 app.post('/deleteAllCharacters', characterController.deleteAllCharacters, (req, res) => {
   return res.redirect('/home');
@@ -162,8 +166,10 @@ app.post('/getThisCharacter', characterController.getCharacter, (req, res) => {
 })
 
 app.post('/updateCharacter', characterController.updateCharacter, (req, res) => {
-  console.log('after updateCharacter');
+  // console.log('after updateCharacter');
+  // console.log('res.locals.characterid: ', res.locals.characterid);
   const resChar = res.locals.characterid.toString();
+  // console.log('resChar: ', resChar);
   res.redirect(url.format({
     pathname: "/character",
     query: {
@@ -178,7 +184,7 @@ app.post('/updateCharacter', characterController.updateCharacter, (req, res) => 
   // return res.send('after updateCharacter');
 })
 
-app.post('/newCharacterTest', characterController.createCharacter, (req, res) => {
+app.post('/createCharacter', characterController.createCharacter, (req, res) => {
   const resChar = res.locals.character._id.toString();
   // console.log('resChar: ', resChar);
   res.redirect(url.format({
