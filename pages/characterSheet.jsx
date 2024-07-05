@@ -36,7 +36,6 @@ const CharacterSheet = () => {
         // console.log('characterSheet1 charId: ', charId);
 
         const [characterData, setCharacters] = useState([]);
-        // console.log('characterSheet2 charId: ', charId);
 
         const character = async () => {
             const response = await fetch('/getThisCharacter', {
@@ -47,15 +46,39 @@ const CharacterSheet = () => {
                 body: JSON.stringify({ charId })
             });
             const data = await response.json();
+            // console.log('data: ', data);
             setCharacters(data);
         };
-
-        // console.log('charId3: ', charId);
-        // console.log('characterData11: ', characterData)
 
         useEffect(() => {
             character()
         }, []);
+
+       
+
+        // let characterData = {};
+
+        // const character = async () => {
+        //     const response = await fetch('/getThisCharacter', {
+        //         method: "POST",
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({ charId })
+        //     });
+        //     characterData = await response.json();
+        //     console.log("cD in async: ", characterData);
+        //     // console.log('data: ', data);
+        //     // setCharacters(data);
+        //     // return ;
+        // };
+
+        // character();
+
+        // const characterData = character();
+
+
+        console.log("characterData: ", characterData)
 
         // console.log('charId4: ', charId);
 
