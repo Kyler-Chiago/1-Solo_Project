@@ -6,7 +6,7 @@ const SkillsBlock = props => {
     return (
         <div className="whatIsThis">
             {/* <input name="acrSklButtonOpacity" type="text" placeholder="" className="dexteritySTInput" form="saveCharacter" id="acrSklButtonOpacity" value={acrSklButtonOpacity}></input> */}
-            <div className="acrobatics">
+            <div className="acrobatics changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="acrSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('acrSklButton');
@@ -43,7 +43,7 @@ const SkillsBlock = props => {
                     Acrobatics (Dex)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="AniSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('AniSklButton');
@@ -68,7 +68,7 @@ const SkillsBlock = props => {
                     Animal Handling (Wis)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="ArcSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('ArcSklButton');
@@ -93,7 +93,7 @@ const SkillsBlock = props => {
                     Arcana (Int)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="AthSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('AthSklButton');
@@ -118,7 +118,7 @@ const SkillsBlock = props => {
                     Athletics (Str)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="decSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('decSklButton');
@@ -143,7 +143,7 @@ const SkillsBlock = props => {
                     Deception (Cha)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="hisSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('hisSklButton');
@@ -168,7 +168,7 @@ const SkillsBlock = props => {
                     History(Int)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="insSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('insSklButton');
@@ -193,7 +193,7 @@ const SkillsBlock = props => {
                     Insight (Wis)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="intSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('intSklButton');
@@ -218,7 +218,7 @@ const SkillsBlock = props => {
                     Intimidation (Cha)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="invSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('invSklButton');
@@ -243,7 +243,7 @@ const SkillsBlock = props => {
                     Investigation (Int)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="medSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('medSklButton');
@@ -268,7 +268,7 @@ const SkillsBlock = props => {
                     Medicine (Wis)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="ntrSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('ntrSklButton');
@@ -293,7 +293,7 @@ const SkillsBlock = props => {
                     Nature (Int)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="perSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('perSklButton');
@@ -318,7 +318,7 @@ const SkillsBlock = props => {
                     Perception (Cha)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="prfSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('prfSklButton');
@@ -343,7 +343,7 @@ const SkillsBlock = props => {
                     Performance (Cha)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="prsSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('prsSklButton');
@@ -368,7 +368,7 @@ const SkillsBlock = props => {
                     Persuasion (Cha)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="rlgSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('rlgSklButton');
@@ -393,7 +393,7 @@ const SkillsBlock = props => {
                     Religion (Int)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="sohSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('sohSklButton');
@@ -418,7 +418,7 @@ const SkillsBlock = props => {
                     Sleight of Hand (Dex)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="sthSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('sthSklButton');
@@ -443,7 +443,7 @@ const SkillsBlock = props => {
                     Stealth (Dex)
                 </div>
             </div>
-            <div className="midST">
+            <div className="midST changeBorderColor">
                 <div className="STButtonBorder">
                     <button id="srvSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('srvSklButton');
@@ -468,7 +468,7 @@ const SkillsBlock = props => {
                     Survival (Wis)
                 </div>
             </div>
-            <div className="skillsSkills">
+            <div className="skillsSkills changeBorderColor">
                 <div className="STText">
                     Skills
                 </div>

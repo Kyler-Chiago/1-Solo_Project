@@ -2,7 +2,7 @@ import React from 'react'
 
 const CB2Inner = () => {
     return (
-        <div className="cB2InnerWrapper">
+        <div className="cB2InnerWrapper changeBorderColor">
             <div className="atkWrapper">
                 <div className="atkName atkNamePos" >
                     Name

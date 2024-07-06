@@ -126,6 +126,11 @@ characterController.createCharacter = async (req, res, next) => {
     epInp = '',
     gpInp = '',
     ppInp = '',
+    persTrtInp = '',
+    idlsTrtInp = '',
+    bndsTrtInp = '',
+    flwsTrtInp = '',
+    featTrtInp = '',
   } = req.body;
 
   // console.log('acrSklButtonOpacity in cC.cC: ', acrSklButtonOpacity);
@@ -248,6 +253,11 @@ characterController.createCharacter = async (req, res, next) => {
       epInp,
       gpInp,
       ppInp,
+      persTrtInp,
+      idlsTrtInp,
+      bndsTrtInp,
+      flwsTrtInp,
+      featTrtInp,
     });
 
     console.log('character.acrSklButtonOpacity: ', character.acrSklButtonOpacity);
@@ -409,6 +419,11 @@ characterController.updateCharacter = async (req, res, next) => {
     epInp,
     gpInp,
     ppInp,
+    persTrtInp,
+    idlsTrtInp,
+    bndsTrtInp,
+    flwsTrtInp,
+    featTrtInp,
   } = req.body;
 
 
@@ -547,6 +562,11 @@ characterController.updateCharacter = async (req, res, next) => {
       epInp,
       gpInp,
       ppInp,
+      persTrtInp,
+      idlsTrtInp,
+      bndsTrtInp,
+      flwsTrtInp,
+      featTrtInp,
     }});
     // character = await Character.findOne({_id: id});
     // console.log('character after update: ', character);

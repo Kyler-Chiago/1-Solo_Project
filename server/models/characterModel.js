@@ -121,6 +121,11 @@ const characterSchema = new Schema({
   epInp: {type: String},
   gpInp: {type: String},
   ppInp: {type: String},
+  persTrtInp: {type: String},
+  idlsTrtInp: {type: String},
+  bndsTrtInp: {type: String},
+  flwsTrtInp: {type: String},
+  featTrtInp: {type: String},
 });
 
 module.exports = mongoose.model('Character', characterSchema);

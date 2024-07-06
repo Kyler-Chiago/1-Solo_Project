@@ -6,6 +6,7 @@ import SkillsBlock from '../components/SkillsBlock';
 import PWisBlock from '../components/PWisBlock';
 import CB1Inner from '../components/CB1Inner';
 import RB1 from '../components/RB1';
+import RB2 from '../components/RB2';
 import CB2Inner from '../components/CB2Inner';
 import CB3Inner from '../components/CB3Inner';
 
@@ -479,6 +480,21 @@ const CharacterSheet = () => {
 
             let ppInp = document.getElementById('ppInp');
             ppInp.value = characterData.ppInp;
+
+            let persTrtInp = document.getElementById('persTrtInp');
+            persTrtInp.value = characterData.persTrtInp;
+
+            let idlsTrtInp = document.getElementById('idlsTrtInp');
+            idlsTrtInp.value = characterData.idlsTrtInp;
+
+            let bndsTrtInp = document.getElementById('bndsTrtInp');
+            bndsTrtInp.value = characterData.bndsTrtInp;
+
+            let flwsTrtInp = document.getElementById('flwsTrtInp');
+            flwsTrtInp.value = characterData.flwsTrtInp;
+
+            let featTrtInp = document.getElementById('featTrtInp');
+            featTrtInp.value = characterData.featTrtInp;
         }
     }
 
@@ -500,29 +516,29 @@ const CharacterSheet = () => {
                                 </div>
                             </div>
                             <div className="characterBasics">
-                                <div className="classLevel">
+                                <div className="classLevel changeBorderColor">
                                     <div className="charBasicsTextClass">Class</div>
                                     <div className="charBasicsTextLev">Level</div>
                                     <input name="charClass" type="text" placeholder="" className="charBasicsFormClass" form="saveCharacter" id="charClass"></input>
                                     <input name="charLev" type="text" placeholder="" className="charBasicsFormLev" form="saveCharacter" id="charLev"></input>
                                 </div>
-                                <div className="background">
+                                <div className="background changeBorderColor">
                                     <input name="charBack" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="charBack"></input>
                                     <div className="charBasicsText">Background</div>
                                 </div>
-                                <div className="playerName">
+                                <div className="playerName changeBorderColor">
                                     <div className="charBasicsText">Player</div>
                                     <input name="player" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="player"></input>
                                 </div>
-                                <div className="race">
+                                <div className="race changeBorderColor">
                                     <div className="charBasicsText">Race</div>
                                     <input name="race" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="race"></input>
                                 </div>
-                                <div className="alignment">
+                                <div className="alignment changeBorderColor">
                                     <div className="charBasicsText">Alignment</div>
                                     <input name="align" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="align"></input>
                                 </div>
-                                <div className="exp">
+                                <div className="exp changeBorderColor">
                                     <div className="charBasicsText">Experience</div>
                                     <input name="exp" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="exp"></input>
                                 </div>
@@ -533,17 +549,17 @@ const CharacterSheet = () => {
                                 <div className="leftBlockRow">
                                     <div className="statColumn">
                                         <div className="stat">
-                                            <div className="statBorder">
+                                            <div className="statBorder changeBorderColor">
 
                                             </div>
-                                            <div className="ability">
+                                            <div className="ability changeBorderColor">
                                                 <span className="centerText">Strength</span>
                                             </div>
                                             <div className="abilityModifier">
                                                 {/* <span id="strengthModCalc"></span> */}
                                             </div>
                                             <div className="abilityScoreBox">
-                                                <div className="abilityScore">
+                                                <div className="abilityScore changeBorderColor">
                                                     {/* <span >20</span> */}
                                                     <input name="strAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="strAbi"></input>
                                                 </div>
@@ -551,85 +567,85 @@ const CharacterSheet = () => {
                                             <input name="strMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="strMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder">
+                                            <div className="statBorder changeBorderColor">
 
                                             </div>
-                                            <div className="ability">
+                                            <div className="ability changeBorderColor">
                                                 <span>Dexterity</span>
                                             </div>
                                             <div className="abilityModifier">
                                                 {/* <span>+5</span> */}
                                             </div>
                                             <div className="abilityScoreBox">
-                                                <div className="abilityScore">
+                                                <div className="abilityScore changeBorderColor">
                                                     <input name="dexAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="dexAbi"></input>
                                                 </div>
                                             </div>
                                             <input name="dexMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="dexMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder">
+                                            <div className="statBorder changeBorderColor">
 
                                             </div>
-                                            <div className="ability">
+                                            <div className="ability changeBorderColor">
                                                 <span className="centerText">Constitution</span>
                                             </div>
                                             <div className="abilityModifier">
 
                                             </div>
                                             <div className="abilityScoreBox">
-                                                <div className="abilityScore">
+                                                <div className="abilityScore changeBorderColor">
                                                     <input name="conAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="conAbi"></input>
                                                 </div>
                                             </div>
                                             <input name="conMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="conMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder">
+                                            <div className="statBorder changeBorderColor">
 
                                             </div>
-                                            <div className="ability">
+                                            <div className="ability changeBorderColor">
                                                 <span>Intelligence</span>
                                             </div>
                                             <div className="abilityModifier">
 
                                             </div>
                                             <div className="abilityScoreBox">
-                                                <div className="abilityScore">
+                                                <div className="abilityScore changeBorderColor">
                                                     <input name="intAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="intAbi"></input>
                                                 </div>
                                             </div>
                                             <input name="intMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="intMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder">
+                                            <div className="statBorder changeBorderColor">
 
                                             </div>
-                                            <div className="ability">
+                                            <div className="ability changeBorderColor">
                                                 <span>Wisdom</span>
                                             </div>
                                             <div className="abilityModifier">
 
                                             </div>
                                             <div className="abilityScoreBox">
-                                                <div className="abilityScore">
+                                                <div className="abilityScore changeBorderColor">
                                                     <input name="wisAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="wisAbi"></input>
                                                 </div>
                                             </div>
                                             <input name="wisMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="wisMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder">
+                                            <div className="statBorder changeBorderColor">
 
                                             </div>
-                                            <div className="ability">
+                                            <div className="ability changeBorderColor">
                                                 <span>Charisma</span>
                                             </div>
                                             <div className="abilityModifier">
 
                                             </div>
                                             <div className="abilityScoreBox">
-                                                <div className="abilityScore">
+                                                <div className="abilityScore changeBorderColor">
                                                     <input name="chaAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="chaAbi"></input>
                                                 </div>
                                             </div>
@@ -638,7 +654,7 @@ const CharacterSheet = () => {
                                     </div>
                                     <div className="skills">
                                         <div className="inspirationBlock">
-                                            <div className="inspirationCheck">
+                                            <div className="inspirationCheck changeBorderColor">
                                                 <button id="inspirationButton" onClick={() => {
                                                     let inspirationButton = document.getElementById('inspirationButton');
                                                     if (inspirationButton.style.opacity == "0.7") {
@@ -650,20 +666,20 @@ const CharacterSheet = () => {
                                                     }
                                                 }}></button>
                                             </div>
-                                            <div className="inspirationText">
+                                            <div className="inspirationText changeBorderColor">
                                                 Inspiration
                                             </div>
                                         </div>
                                         <div className="profBonusBlock">
-                                            <div className="profCheck">
+                                            <div className="profCheck changeBorderColor">
                                                 <input name="profBon" type="text" placeholder="" className="profCheckInput" form="saveCharacter" id="profBon"></input>
                                             </div>
-                                            <div className="profText">
+                                            <div className="profText changeBorderColor">
                                                 Proficiency Bonus
                                             </div>
                                         </div>
                                         <div className="savingThrowsBlock">
-                                            <div className="strengthST">
+                                            <div className="strengthST changeBorderColor">
                                                 <div className="STButtonBorder">
                                                     <button id="strengthSTButton" onClick={() => {
                                                         let strengthSTButton = document.getElementById('strengthSTButton');
@@ -681,7 +697,7 @@ const CharacterSheet = () => {
                                                     Strength
                                                 </div>
                                             </div>
-                                            <div className="midST dexterityST">
+                                            <div className="midST dexterityST changeBorderColor">
                                                 <div className="STButtonBorder">
                                                     <button id="dexteritySTButton" onClick={() => {
                                                         let strengthSTButton = document.getElementById('dexteritySTButton');
@@ -699,7 +715,7 @@ const CharacterSheet = () => {
                                                     Dexterity
                                                 </div>
                                             </div>
-                                            <div className="midST conST">
+                                            <div className="midST conST changeBorderColor">
                                                 <div className="STButtonBorder">
                                                     <button id="constitutionSTButton" onClick={() => {
                                                         let strengthSTButton = document.getElementById('constitutionSTButton');
@@ -717,7 +733,7 @@ const CharacterSheet = () => {
                                                     Constitution
                                                 </div>
                                             </div>
-                                            <div className="midST intelligenceST">
+                                            <div className="midST intelligenceST changeBorderColor">
                                                 <div className="STButtonBorder">
                                                     <button id="intelligenceSTButton" onClick={() => {
                                                         let strengthSTButton = document.getElementById('intelligenceSTButton');
@@ -735,7 +751,7 @@ const CharacterSheet = () => {
                                                     Intelligence
                                                 </div>
                                             </div>
-                                            <div className="midST wisdomST">
+                                            <div className="midST wisdomST changeBorderColor">
                                                 <div className="STButtonBorder">
                                                     <button id="wisdomSTButton" onClick={() => {
                                                         let strengthSTButton = document.getElementById('wisdomSTButton');
@@ -753,7 +769,7 @@ const CharacterSheet = () => {
                                                     Wisdom
                                                 </div>
                                             </div>
-                                            <div className="charismaST">
+                                            <div className="charismaST changeBorderColor">
                                                 <div className="STButtonBorder">
                                                     <button id="charismaSTButton" onClick={() => {
                                                         let strengthSTButton = document.getElementById('charismaSTButton');
@@ -771,7 +787,7 @@ const CharacterSheet = () => {
                                                     Charisma
                                                 </div>
                                             </div>
-                                            <div className="savingThrowsST">
+                                            <div className="savingThrowsST changeBorderColor">
                                                 <div className="savingThrowsSTText">
                                                     {/* <span>Saving Throws</span> */}
                                                     Saving Throws
@@ -787,7 +803,7 @@ const CharacterSheet = () => {
                                 </div>
                                 <div className="l3">
                                     < PWisBlock />
-                                    <div className="l3OPaL">
+                                    <div className="l3OPaL changeBorderColor">
                                         <textarea name="oPandL" type="text" placeholder="" className="oPandL" form="saveCharacter" id="oPandL"></textarea>
                                         <div className="l3OPaLBot">Other Proficiencies & Languages</div>
                                     </div>
@@ -813,9 +829,7 @@ const CharacterSheet = () => {
                                     <input name="aniButCol" type="text" placeholder="" form="saveCharacter" id="aniButCol"></input>
                                 </div> */}
                                 <RB1/>
-                                <div className="rB2">
-
-                                </div>
+                                <RB2 />
                             </div>
                             {/* <h1>
                     Dungeons & Dragons 5e Character Sheet

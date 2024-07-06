@@ -3,6 +3,24 @@ import React from 'react'
 const RB1 = () => {
     return (
         <div className="rB1">
+            <div className="rB1InnerWrapper changeBorderColor" >
+                <div className="persTraitsWrapper changeBorderColor">
+                    <textarea name="persTrtInp" type="text" placeholder="" className="persTrtInp" form="saveCharacter" id="persTrtInp"></textarea>
+                    <div className="perTrtTxt">Personality Traits</div>
+                </div>
+                <div className="idealsWrapper changeBorderColor">
+                    <textarea name="idlsTrtInp" type="text" placeholder="" className="persTrtInpGen" form="saveCharacter" id="idlsTrtInp"></textarea>
+                    <div className="perTrtTxt">Ideals</div>
+                </div>
+                <div className="bondsWrapper changeBorderColor">
+                <textarea name="bndsTrtInp" type="text" placeholder="" className="persTrtInpGen" form="saveCharacter" id="bndsTrtInp"></textarea>
+                <div className="perTrtTxt">Bonds</div>
+                </div>
+                <div className="flawsWrapper changeBorderColor">
+                <textarea name="flwsTrtInp" type="text" placeholder="" className="persTrtInpGen" form="saveCharacter" id="flwsTrtInp"></textarea>
+                <div className="perTrtTxt">Flaws</div>
+                </div>
+            </div>
             {/* Using hidden inputs to save the button opacity and color data since idk how else to do it */}
             <input name="acrButOpa" type="hidden" placeholder="" form="saveCharacter" id="acrButOpa"></input>
             <input name="acrButCol" type="hidden" placeholder="" form="saveCharacter" id="acrButCol"></input>
