@@ -5,6 +5,10 @@ import CharacterSheetNav from '../components/CharacterSheetNav';
 import SkillsBlock from '../components/SkillsBlock';
 import PWisBlock from '../components/PWisBlock';
 import CB1Inner from '../components/CB1Inner';
+import RB1 from '../components/RB1';
+import CB2Inner from '../components/CB2Inner';
+import CB3Inner from '../components/CB3Inner';
+
 
 const CharacterSheet = () => {
 
@@ -36,6 +40,7 @@ const CharacterSheet = () => {
         // console.log('characterSheet1 charId: ', charId);
 
         const [characterData, setCharacters] = useState([]);
+        // console.log('characterSheet2 charId: ', charId);
 
         const character = async () => {
             const response = await fetch('/getThisCharacter', {
@@ -46,39 +51,15 @@ const CharacterSheet = () => {
                 body: JSON.stringify({ charId })
             });
             const data = await response.json();
-            // console.log('data: ', data);
             setCharacters(data);
         };
+
+        // console.log('charId3: ', charId);
+        // console.log('characterData11: ', characterData)
 
         useEffect(() => {
             character()
         }, []);
-
-       
-
-        // let characterData = {};
-
-        // const character = async () => {
-        //     const response = await fetch('/getThisCharacter', {
-        //         method: "POST",
-        //         headers: {
-        //             'Content-Type': 'application/json',
-        //         },
-        //         body: JSON.stringify({ charId })
-        //     });
-        //     characterData = await response.json();
-        //     console.log("cD in async: ", characterData);
-        //     // console.log('data: ', data);
-        //     // setCharacters(data);
-        //     // return ;
-        // };
-
-        // character();
-
-        // const characterData = character();
-
-
-        console.log("characterData: ", characterData)
 
         // console.log('charId4: ', charId);
 
@@ -226,7 +207,7 @@ const CharacterSheet = () => {
             let srvSkl = document.getElementById("srvSkl");
             srvSkl.value = characterData.srvSkl;
 
-            
+
             // console.log("characterData.acrSklButtonOpacity in cSheet: ", characterData.acrSklButtonOpacity);
             // let acrSklButtonOpacity = document.getElementById("acrSklButtonOpacity");
             // acrSklButtonOpacity.style.opacity = characterData.acrSklButtonOpacity;
@@ -255,9 +236,251 @@ const CharacterSheet = () => {
 
             let hp = document.getElementById("hp");
             hp.value = characterData.hp;
+
+            let acrSklButton = document.getElementById("acrSklButton");
+            acrSklButton.style.opacity = characterData.acrButOpa;
+            acrSklButton.style.backgroundColor = characterData.acrButCol;
+            let acrButOpa = document.getElementById("acrButOpa");
+            acrButOpa.value = characterData.acrButOpa;
+            let acrButCol = document.getElementById("acrButCol");
+            acrButCol.value = characterData.acrButCol;
+
+
+            let AniSklButton = document.getElementById("AniSklButton");
+            AniSklButton.style.opacity = characterData.aniButOpa;
+            AniSklButton.style.backgroundColor = characterData.aniButCol;
+            let aniButOpa = document.getElementById("aniButOpa");
+            aniButOpa.value = characterData.aniButOpa;
+            let aniButCol = document.getElementById("aniButCol");
+            aniButCol.value = characterData.aniButCol;
+
+            let ArcSklButton = document.getElementById("ArcSklButton");
+            ArcSklButton.style.opacity = characterData.arcButOpa;
+            ArcSklButton.style.backgroundColor = characterData.arcButCol;
+            let arcButOpa = document.getElementById("arcButOpa");
+            arcButOpa.value = characterData.arcButOpa;
+            let arcButCol = document.getElementById("arcButCol");
+            arcButCol.value = characterData.arcButCol;
+
+            let AthSklButton = document.getElementById("AthSklButton");
+            AthSklButton.style.opacity = characterData.athButOpa;
+            AthSklButton.style.backgroundColor = characterData.athButCol;
+            let athButOpa = document.getElementById("athButOpa");
+            athButOpa.value = characterData.athButOpa;
+            let athButCol = document.getElementById("athButCol");
+            athButCol.value = characterData.athButCol;
+
+            let decSklButton = document.getElementById("decSklButton");
+            decSklButton.style.opacity = characterData.decButOpa;
+            decSklButton.style.backgroundColor = characterData.decButCol;
+            let decButOpa = document.getElementById("decButOpa");
+            decButOpa.value = characterData.decButOpa;
+            let decButCol = document.getElementById("decButCol");
+            decButCol.value = characterData.decButCol;
+
+            let hisSklButton = document.getElementById("hisSklButton");
+            hisSklButton.style.opacity = characterData.hisButOpa;
+            hisSklButton.style.backgroundColor = characterData.hisButCol;
+            let hisButOpa = document.getElementById("hisButOpa");
+            hisButOpa.value = characterData.hisButOpa;
+            let hisButCol = document.getElementById("hisButCol");
+            hisButCol.value = characterData.hisButCol;
+
+            let insSklButton = document.getElementById("insSklButton");
+            insSklButton.style.opacity = characterData.insButOpa;
+            insSklButton.style.backgroundColor = characterData.insButCol;
+            let insButOpa = document.getElementById("insButOpa");
+            insButOpa.value = characterData.insButOpa;
+            let insButCol = document.getElementById("insButCol");
+            insButCol.value = characterData.insButCol;
+
+            let intSklButton = document.getElementById("intSklButton");
+            intSklButton.style.opacity = characterData.intButOpa;
+            intSklButton.style.backgroundColor = characterData.intButCol;
+            let intButOpa = document.getElementById("intButOpa");
+            intButOpa.value = characterData.intButOpa;
+            let intButCol = document.getElementById("intButCol");
+            intButCol.value = characterData.intButCol;
+
+            let invSklButton = document.getElementById("invSklButton");
+            invSklButton.style.opacity = characterData.invButOpa;
+            invSklButton.style.backgroundColor = characterData.invButCol;
+            let invButOpa = document.getElementById("invButOpa");
+            invButOpa.value = characterData.invButOpa;
+            let invButCol = document.getElementById("invButCol");
+            invButCol.value = characterData.invButCol;
+
+            let medSklButton = document.getElementById("medSklButton");
+            medSklButton.style.opacity = characterData.medButOpa;
+            medSklButton.style.backgroundColor = characterData.medButCol;
+            let medButOpa = document.getElementById("medButOpa");
+            medButOpa.value = characterData.medButOpa;
+            let medButCol = document.getElementById("medButCol");
+            medButCol.value = characterData.medButCol;
+
+            let ntrSklButton = document.getElementById("ntrSklButton");
+            ntrSklButton.style.opacity = characterData.ntrButOpa;
+            ntrSklButton.style.backgroundColor = characterData.ntrButCol;
+            let ntrButOpa = document.getElementById("ntrButOpa");
+            ntrButOpa.value = characterData.ntrButOpa;
+            let ntrButCol = document.getElementById("ntrButCol");
+            ntrButCol.value = characterData.ntrButCol;
+
+            let perSklButton = document.getElementById("perSklButton");
+            perSklButton.style.opacity = characterData.perButOpa;
+            perSklButton.style.backgroundColor = characterData.perButCol;
+            let perButOpa = document.getElementById("perButOpa");
+            perButOpa.value = characterData.perButOpa;
+            let perButCol = document.getElementById("perButCol");
+            perButCol.value = characterData.perButCol;
+
+            let prfSklButton = document.getElementById("prfSklButton");
+            prfSklButton.style.opacity = characterData.prfButOpa;
+            prfSklButton.style.backgroundColor = characterData.prfButCol;
+            let prfButOpa = document.getElementById("prfButOpa");
+            prfButOpa.value = characterData.prfButOpa;
+            let prfButCol = document.getElementById("prfButCol");
+            prfButCol.value = characterData.prfButCol;
+
+            let prsSklButton = document.getElementById("prsSklButton");
+            prsSklButton.style.opacity = characterData.prsButOpa;
+            prsSklButton.style.backgroundColor = characterData.prsButCol;
+            let prsButOpa = document.getElementById("prsButOpa");
+            prsButOpa.value = characterData.prsButOpa;
+            let prsButCol = document.getElementById("prsButCol");
+            prsButCol.value = characterData.prsButCol;
+
+            let rlgSklButton = document.getElementById("rlgSklButton");
+            rlgSklButton.style.opacity = characterData.rlgButOpa;
+            rlgSklButton.style.backgroundColor = characterData.rlgButCol;
+            let rlgButOpa = document.getElementById("rlgButOpa");
+            rlgButOpa.value = characterData.rlgButOpa;
+            let rlgButCol = document.getElementById("rlgButCol");
+            rlgButCol.value = characterData.rlgButCol;
+
+            let sohSklButton = document.getElementById("sohSklButton");
+            sohSklButton.style.opacity = characterData.sohButOpa;
+            sohSklButton.style.backgroundColor = characterData.sohButCol;
+            let sohButOpa = document.getElementById("sohButOpa");
+            sohButOpa.value = characterData.sohButOpa;
+            let sohButCol = document.getElementById("sohButCol");
+            sohButCol.value = characterData.sohButCol;
+
+            let sthSklButton = document.getElementById("sthSklButton");
+            sthSklButton.style.opacity = characterData.sthButOpa;
+            sthSklButton.style.backgroundColor = characterData.sthButCol;
+            let sthButOpa = document.getElementById("sthButOpa");
+            sthButOpa.value = characterData.sthButOpa;
+            let sthButCol = document.getElementById("sthButCol");
+            sthButCol.value = characterData.sthButCol;
+
+            let srvSklButton = document.getElementById("srvSklButton");
+            srvSklButton.style.opacity = characterData.srvButOpa;
+            srvSklButton.style.backgroundColor = characterData.srvButCol;
+            let srvButOpa = document.getElementById("srvButOpa");
+            srvButOpa.value = characterData.srvButOpa;
+            let srvButCol = document.getElementById("srvButCol");
+            srvButCol.value = characterData.srvButCol;
+
+            let inspirationButton = document.getElementById("inspirationButton");
+            inspirationButton.style.opacity = characterData.inspButOpa;
+            let inspButOpa = document.getElementById('inspButOpa');
+            inspButOpa.value = characterData.inspButOpa;
+
+            let strengthSTButton = document.getElementById("strengthSTButton");
+            strengthSTButton.style.opacity = characterData.strSTButOpa;
+            let strSTButOpa = document.getElementById('strSTButOpa');
+            strSTButOpa.value = characterData.strSTButOpa;
+
+            let dexteritySTButton = document.getElementById("dexteritySTButton");
+            dexteritySTButton.style.opacity = characterData.dexSTButOpa;
+            let dexSTButOpa = document.getElementById('dexSTButOpa');
+            dexSTButOpa.value = characterData.dexSTButOpa;
+
+            let constitutionSTButton = document.getElementById("constitutionSTButton");
+            constitutionSTButton.style.opacity = characterData.conSTButOpa;
+            let conSTButOpa = document.getElementById('conSTButOpa');
+            conSTButOpa.value = characterData.conSTButOpa;
+
+            let intelligenceSTButton = document.getElementById("intelligenceSTButton");
+            intelligenceSTButton.style.opacity = characterData.intSTButOpa;
+            let intSTButOpa = document.getElementById('intSTButOpa');
+            intSTButOpa.value = characterData.intSTButOpa;
+
+            let wisdomSTButton = document.getElementById("wisdomSTButton");
+            wisdomSTButton.style.opacity = characterData.wisSTButOpa;
+            let wisSTButOpa = document.getElementById('wisSTButOpa');
+            wisSTButOpa.value = characterData.wisSTButOpa;
+
+            let charismaSTButton = document.getElementById("charismaSTButton");
+            charismaSTButton.style.opacity = characterData.chaSTButOpa;
+            let chaSTButOpa = document.getElementById('chaSTButOpa');
+            chaSTButOpa.value = characterData.chaSTButOpa;
+
+            let tempHp = document.getElementById("tempHp");
+            tempHp.value = characterData.tempHp;
+
+            let ttlHdInp = document.getElementById("ttlHdInp");
+            ttlHdInp.value = characterData.ttlHdInp;
+
+            let curHdInp = document.getElementById('curHdInp');
+            curHdInp.value = characterData.curHdInp;
+
+            let curDSSuc = document.getElementById('curDSSuc');
+            curDSSuc.value = characterData.curDSSuc;
+
+            let curDSFal = document.getElementById('curDSFal');
+            curDSFal.value = characterData.curDSFal;
+
+            let atkNam1 = document.getElementById('atkNam1');
+            atkNam1.value = characterData.atkNam1;
+
+            let atkNam2 = document.getElementById('atkNam2');
+            atkNam2.value = characterData.atkNam2;
+
+            let atkNam3 = document.getElementById('atkNam3');
+            atkNam3.value = characterData.atkNam3;
+
+            let atkBon1 = document.getElementById('atkBon1');
+            atkBon1.value = characterData.atkBon1;
+
+            let atkBon2 = document.getElementById('atkBon2');
+            atkBon2.value = characterData.atkBon2;
+
+            let atkBon3 = document.getElementById('atkBon3');
+            atkBon3.value = characterData.atkBon3;
+
+            let dmgTyp1 = document.getElementById('dmgTyp1');
+            dmgTyp1.value = characterData.dmgTyp1;
+
+            let dmgTyp2 = document.getElementById('dmgTyp2');
+            dmgTyp2.value = characterData.dmgTyp2;
+
+            let dmgTyp3 = document.getElementById('dmgTyp3');
+            dmgTyp3.value = characterData.dmgTyp3;
+
+            let atkSplInp = document.getElementById('atkSplInp');
+            atkSplInp.value = characterData.atkSplInp;
+
+            let cB3InpAre = document.getElementById('cB3InpAre');
+            cB3InpAre.value = characterData.cB3InpAre;
+
+            let cpInp = document.getElementById('cpInp');
+            cpInp.value = characterData.cpInp;
+
+            let spInp = document.getElementById('spInp');
+            spInp.value = characterData.spInp;
+
+            let epInp = document.getElementById('epInp');
+            epInp.value = characterData.epInp;
+
+            let gpInp = document.getElementById('gpInp');
+            gpInp.value = characterData.gpInp;
+
+            let ppInp = document.getElementById('ppInp');
+            ppInp.value = characterData.ppInp;
         }
     }
-    // console.log('acrSklButtonOpacity in cSheet2: ', acrSklButtonOpacity);
 
     return (
         <div className="wrapper">
@@ -420,8 +643,10 @@ const CharacterSheet = () => {
                                                     let inspirationButton = document.getElementById('inspirationButton');
                                                     if (inspirationButton.style.opacity == "0.7") {
                                                         document.getElementById('inspirationButton').style.opacity = "0";
+                                                        document.getElementById('inspButOpa').value = "0";
                                                     } else {
                                                         document.getElementById('inspirationButton').style.opacity = "0.7";
+                                                        document.getElementById('inspButOpa').value = "0.7";
                                                     }
                                                 }}></button>
                                             </div>
@@ -444,8 +669,10 @@ const CharacterSheet = () => {
                                                         let strengthSTButton = document.getElementById('strengthSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('strengthSTButton').style.opacity = "0";
+                                                            document.getElementById('strSTButOpa').value = "0";
                                                         } else {
                                                             document.getElementById('strengthSTButton').style.opacity = "0.7";
+                                                            document.getElementById('strSTButOpa').value = "0.7";
                                                         }
                                                     }}></button>
                                                 </div>
@@ -460,8 +687,10 @@ const CharacterSheet = () => {
                                                         let strengthSTButton = document.getElementById('dexteritySTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('dexteritySTButton').style.opacity = "0";
+                                                            document.getElementById('dexSTButOpa').value = "0";
                                                         } else {
                                                             document.getElementById('dexteritySTButton').style.opacity = "0.7";
+                                                            document.getElementById('dexSTButOpa').value = "0.7";
                                                         }
                                                     }}></button>
                                                 </div>
@@ -476,8 +705,10 @@ const CharacterSheet = () => {
                                                         let strengthSTButton = document.getElementById('constitutionSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('constitutionSTButton').style.opacity = "0";
+                                                            document.getElementById('conSTButOpa').value = "0";
                                                         } else {
                                                             document.getElementById('constitutionSTButton').style.opacity = "0.7";
+                                                            document.getElementById('conSTButOpa').value = "0.7";
                                                         }
                                                     }}></button>
                                                 </div>
@@ -492,8 +723,10 @@ const CharacterSheet = () => {
                                                         let strengthSTButton = document.getElementById('intelligenceSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('intelligenceSTButton').style.opacity = "0";
+                                                            document.getElementById('intSTButOpa').value = "0";
                                                         } else {
                                                             document.getElementById('intelligenceSTButton').style.opacity = "0.7";
+                                                            document.getElementById('intSTButOpa').value = "0.7";
                                                         }
                                                     }}></button>
                                                 </div>
@@ -508,8 +741,10 @@ const CharacterSheet = () => {
                                                         let strengthSTButton = document.getElementById('wisdomSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('wisdomSTButton').style.opacity = "0";
+                                                            document.getElementById('wisSTButOpa').value = "0";
                                                         } else {
                                                             document.getElementById('wisdomSTButton').style.opacity = "0.7";
+                                                            document.getElementById('wisSTButOpa').value = "0.7";
                                                         }
                                                     }}></button>
                                                 </div>
@@ -524,8 +759,10 @@ const CharacterSheet = () => {
                                                         let strengthSTButton = document.getElementById('charismaSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('charismaSTButton').style.opacity = "0";
+                                                            document.getElementById('chaSTButOpa').value = "0";
                                                         } else {
                                                             document.getElementById('charismaSTButton').style.opacity = "0.7";
+                                                            document.getElementById('chaSTButOpa').value = "0.7";
                                                         }
                                                     }}></button>
                                                 </div>
@@ -542,35 +779,40 @@ const CharacterSheet = () => {
                                             </div>
                                         </div>
                                         <div className="skillsBlock">
-                                                <SkillsBlock 
-                                                acrSklButtonOpacity = { acrSklButtonOpacity}
-                                                />
+                                            <SkillsBlock
+                                                acrSklButtonOpacity={acrSklButtonOpacity}
+                                            />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="l3">
-                                    < PWisBlock/>
+                                    < PWisBlock />
                                     <div className="l3OPaL">
-                                    <textarea name="oPandL" type="text" placeholder="" className = "oPandL" form="saveCharacter" id="oPandL"></textarea>
-                                        <div className ="l3OPaLBot">Other Proficiencies & Languages</div>
+                                        <textarea name="oPandL" type="text" placeholder="" className="oPandL" form="saveCharacter" id="oPandL"></textarea>
+                                        <div className="l3OPaLBot">Other Proficiencies & Languages</div>
                                     </div>
                                 </div>
                             </div>
                             <div className="centerBlock">
                                 <div className="cB1">
-                                    <CB1Inner/>
+                                    <CB1Inner />
                                 </div>
                                 <div className="cB2">
-
+                                    <CB2Inner />
                                 </div>
                                 <div className="cB3">
-
+                                    <CB3Inner />
                                 </div>
                             </div>
                             <div className="rightBlock">
-                                <div className="rB1">
-
-                                </div>
+                                {/* <div className="rB1">
+                                    using hidden inputs to save the button opacity and background color
+                                    <input name="acrButOpa" type="text" placeholder="" form="saveCharacter" id="acrButOpa"></input>
+                                    <input name="acrButCol" type="text" placeholder="" form="saveCharacter" id="acrButCol"></input>
+                                    <input name="aniButOpa" type="text" placeholder="" form="saveCharacter" id="aniButOpa"></input>
+                                    <input name="aniButCol" type="text" placeholder="" form="saveCharacter" id="aniButCol"></input>
+                                </div> */}
+                                <RB1/>
                                 <div className="rB2">
 
                                 </div>
@@ -582,9 +824,9 @@ const CharacterSheet = () => {
                     </div>
 
                 </div>
-                <CharacterSheetNav 
-                key = {`characterSheetNav:` + charId}
-                charId = {charId}
+                <CharacterSheetNav
+                    key={`characterSheetNav:` + charId}
+                    charId={charId}
                 // acrSklButtonOpacity = {acrSklButtonOpacity}
                 />
             </div>

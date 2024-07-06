@@ -43,15 +43,44 @@ const CB1Inner = () => {
             </div>
             <div className="tmpHpWrapper">
                 <div className="tmpHpInner">
-                    
+                    <div className="tempHpInputWrapper">
+                        <input name="tempHp" type="text" placeholder="" className="tempHp" form="saveCharacter" id="tempHp"></input>
+                    </div>
+                    <div className="tempHPTextWrapper">
+                        Temporary Hit Points
+                    </div>
                 </div>
             </div>
             <div className="hdAndDSWrapper">
                 <div className="hdWrapper">
-
+                    <div className="totalHd">
+                        <div className="totalHdText">Total:</div>
+                        <input name="ttlHdInp" type="text" placeholder="" className="ttlHdInp" form="saveCharacter" id="ttlHdInp"></input>
+                    </div>
+                    <div className="currHdWrapper">
+                        <input name="curHdInp" type="text" placeholder="" className="curHdInp" form="saveCharacter" id="curHdInp"></input>
+                    </div>
+                    <div className="hDText">
+                        Hit Dice
+                    </div>
                 </div>
                 <div className="dsWrapper">
-
+                    {/* Made the death saves text inputs instead of buttons to save time */}
+                    <div className="dSSucWrapper">
+                        <div className="dSText">
+                            Successes:
+                        </div>
+                        <input name="curDSSuc" type="text" placeholder="" className="curHdInp" form="saveCharacter" id="curDSSuc"></input>
+                    </div>
+                    <div className="dSSucWrapper">
+                        <div className="dSText">
+                            Failures:
+                        </div>
+                        <input name="curDSFal" type="text" placeholder="" className="curHdInp" form="saveCharacter" id="curDSFal"></input>
+                    </div>
+                    <div className="hDText">
+                        Death Saves
+                    </div>
                 </div>
             </div>
         </div>

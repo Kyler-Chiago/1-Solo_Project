@@ -166,21 +166,14 @@ app.post('/getThisCharacter', characterController.getCharacter, (req, res) => {
 })
 
 app.post('/updateCharacter', characterController.updateCharacter, (req, res) => {
-  // console.log('after updateCharacter');
-  // console.log('res.locals.characterid: ', res.locals.characterid);
-  const resChar = res.locals.characterid.toString();
-  // console.log('resChar: ', resChar);
-  res.redirect(url.format({
-    pathname: "/character",
-    query: {
-      "char": resChar,
-    }
-    // "test": resChar,
-    // query: {
-    //   "/":resChar,
-    // }
-  }))
-  // return res.status(200);
+  // const resChar = res.locals.characterid.toString();
+  // res.redirect(url.format({
+  //   pathname: "/character",
+  //   query: {
+  //     "char": resChar,
+  //   }
+  // }))
+  return res.status(200);
   // return res.send('after updateCharacter');
 })
 

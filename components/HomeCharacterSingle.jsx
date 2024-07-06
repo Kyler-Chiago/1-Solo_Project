@@ -21,22 +21,11 @@ const HomeCharacterSingle = props => {
                 Race: {race}
             </div>
             <div className="singleCharacterHomeClass">
-                {/* Class: {charClass} */}
-                {/* testing a button redirect with passing the chardata with it to fill in the character sheet */}
-                {/* <button>test character</button> */}
-                {/* <form method="post">
-                    <input type="submit" value={charId}></input>
-                </form> */}
-                {/* Class: {charClass} */}
-                <form action='/getCharacter' method='POST'>
-                    <button name="_id" type="submit" value={charId}>get this</button>
-                    {/* <input type='submit' value={charId} placeholder="" className="createCharacterButton"></input> */}
-
-                </form>
-
-                {/* The Id is being successfully passed here */}
-                {/* Id: {charId} */}
+                Class: {charClass}
             </div>
+            <form action='/getCharacter' method='POST' className="getThisCharForm">
+                    <button name="_id" type="submit" value={charId} className = "getThisCharButton"></button>
+            </form>
         </div>
     )
 }

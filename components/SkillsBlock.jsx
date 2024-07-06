@@ -10,10 +10,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="acrSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('acrSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('acrSklButton').style.opacity = "0.8";
+                            document.getElementById('acrSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('acrButOpa').value = "0.8";
+                            document.getElementById('acrButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('acrSklButton').style.opacity = "0";
+                            document.getElementById('acrButOpa').value = '0';
                         } else {
-                            document.getElementById('acrSklButton').style.opacity = "0.7";
+                            document.getElementById('acrSklButton').style.opacity = "1";
+                            document.getElementById('acrSklButton').style.backgroundColor = "blue";
+                            document.getElementById('acrButOpa').value = "1";
+                            document.getElementById('acrButCol').value = "blue";
                         }
                     }}></button>
                     {/* <input type="button" name="acrSklButtonOpacity" id="acrSklButtonOpacity" value={acrSklButtonOpacity} form="saveCharacter" onClick={() => {
@@ -38,10 +47,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="AniSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('AniSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('AniSklButton').style.opacity = "0.8";
+                            document.getElementById('AniSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('aniButOpa').value = "0.8";
+                            document.getElementById('aniButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('AniSklButton').style.opacity = "0";
+                            document.getElementById('aniButOpa').value = '0';
                         } else {
-                            document.getElementById('AniSklButton').style.opacity = "0.7";
+                            document.getElementById('AniSklButton').style.opacity = "1";
+                            document.getElementById('AniSklButton').style.backgroundColor = "blue";
+                            document.getElementById('aniButOpa').value = "1";
+                            document.getElementById('aniButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -54,10 +72,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="ArcSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('ArcSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('ArcSklButton').style.opacity = "0.8";
+                            document.getElementById('ArcSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('arcButOpa').value = "0.8";
+                            document.getElementById('arcButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('ArcSklButton').style.opacity = "0";
+                            document.getElementById('arcButOpa').value = '0';
                         } else {
-                            document.getElementById('ArcSklButton').style.opacity = "0.7";
+                            document.getElementById('ArcSklButton').style.opacity = "1";
+                            document.getElementById('ArcSklButton').style.backgroundColor = "blue";
+                            document.getElementById('arcButOpa').value = "1";
+                            document.getElementById('arcButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -70,10 +97,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="AthSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('AthSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('AthSklButton').style.opacity = "0.8";
+                            document.getElementById('AthSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('athButOpa').value = "0.8";
+                            document.getElementById('athButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('AthSklButton').style.opacity = "0";
+                            document.getElementById('athButOpa').value = '0';
                         } else {
-                            document.getElementById('AthSklButton').style.opacity = "0.7";
+                            document.getElementById('AthSklButton').style.opacity = "1";
+                            document.getElementById('AthSklButton').style.backgroundColor = "blue";
+                            document.getElementById('athButOpa').value = "1";
+                            document.getElementById('athButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -86,10 +122,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="decSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('decSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('decSklButton').style.opacity = "0.8";
+                            document.getElementById('decSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('decButOpa').value = "0.8";
+                            document.getElementById('decButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('decSklButton').style.opacity = "0";
+                            document.getElementById('decButOpa').value = '0';
                         } else {
-                            document.getElementById('decSklButton').style.opacity = "0.7";
+                            document.getElementById('decSklButton').style.opacity = "1";
+                            document.getElementById('decSklButton').style.backgroundColor = "blue";
+                            document.getElementById('decButOpa').value = "1";
+                            document.getElementById('decButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -102,10 +147,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="hisSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('hisSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('hisSklButton').style.opacity = "0.8";
+                            document.getElementById('hisSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('hisButOpa').value = "0.8";
+                            document.getElementById('hisButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('hisSklButton').style.opacity = "0";
+                            document.getElementById('hisButOpa').value = '0';
                         } else {
-                            document.getElementById('hisSklButton').style.opacity = "0.7";
+                            document.getElementById('hisSklButton').style.opacity = "1";
+                            document.getElementById('hisSklButton').style.backgroundColor = "blue";
+                            document.getElementById('hisButOpa').value = "1";
+                            document.getElementById('hisButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -118,10 +172,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="insSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('insSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('insSklButton').style.opacity = "0.8";
+                            document.getElementById('insSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('insButOpa').value = "0.8";
+                            document.getElementById('insButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('insSklButton').style.opacity = "0";
+                            document.getElementById('insButOpa').value = '0';
                         } else {
-                            document.getElementById('insSklButton').style.opacity = "0.7";
+                            document.getElementById('insSklButton').style.opacity = "1";
+                            document.getElementById('insSklButton').style.backgroundColor = "blue";
+                            document.getElementById('insButOpa').value = "1";
+                            document.getElementById('insButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -134,10 +197,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="intSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('intSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('intSklButton').style.opacity = "0.8";
+                            document.getElementById('intSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('intButOpa').value = "0.8";
+                            document.getElementById('intButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('intSklButton').style.opacity = "0";
+                            document.getElementById('intButOpa').value = '0';
                         } else {
-                            document.getElementById('intSklButton').style.opacity = "0.7";
+                            document.getElementById('intSklButton').style.opacity = "1";
+                            document.getElementById('intSklButton').style.backgroundColor = "blue";
+                            document.getElementById('intButOpa').value = "1";
+                            document.getElementById('intButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -150,10 +222,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="invSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('invSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('invSklButton').style.opacity = "0.8";
+                            document.getElementById('invSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('invButOpa').value = "0.8";
+                            document.getElementById('invButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('invSklButton').style.opacity = "0";
+                            document.getElementById('invButOpa').value = '0';
                         } else {
-                            document.getElementById('invSklButton').style.opacity = "0.7";
+                            document.getElementById('invSklButton').style.opacity = "1";
+                            document.getElementById('invSklButton').style.backgroundColor = "blue";
+                            document.getElementById('invButOpa').value = "1";
+                            document.getElementById('invButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -166,10 +247,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="medSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('medSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('medSklButton').style.opacity = "0.8";
+                            document.getElementById('medSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('medButOpa').value = "0.8";
+                            document.getElementById('medButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('medSklButton').style.opacity = "0";
+                            document.getElementById('medButOpa').value = '0';
                         } else {
-                            document.getElementById('medSklButton').style.opacity = "0.7";
+                            document.getElementById('medSklButton').style.opacity = "1";
+                            document.getElementById('medSklButton').style.backgroundColor = "blue";
+                            document.getElementById('medButOpa').value = "1";
+                            document.getElementById('medButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -182,10 +272,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="ntrSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('ntrSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('ntrSklButton').style.opacity = "0.8";
+                            document.getElementById('ntrSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('ntrButOpa').value = "0.8";
+                            document.getElementById('ntrButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('ntrSklButton').style.opacity = "0";
+                            document.getElementById('ntrButOpa').value = '0';
                         } else {
-                            document.getElementById('ntrSklButton').style.opacity = "0.7";
+                            document.getElementById('ntrSklButton').style.opacity = "1";
+                            document.getElementById('ntrSklButton').style.backgroundColor = "blue";
+                            document.getElementById('ntrButOpa').value = "1";
+                            document.getElementById('ntrButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -198,10 +297,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="perSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('perSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('perSklButton').style.opacity = "0.8";
+                            document.getElementById('perSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('perButOpa').value = "0.8";
+                            document.getElementById('perButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('perSklButton').style.opacity = "0";
+                            document.getElementById('perButOpa').value = '0';
                         } else {
-                            document.getElementById('perSklButton').style.opacity = "0.7";
+                            document.getElementById('perSklButton').style.opacity = "1";
+                            document.getElementById('perSklButton').style.backgroundColor = "blue";
+                            document.getElementById('perButOpa').value = "1";
+                            document.getElementById('perButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -214,10 +322,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="prfSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('prfSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('prfSklButton').style.opacity = "0.8";
+                            document.getElementById('prfSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('prfButOpa').value = "0.8";
+                            document.getElementById('prfButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('prfSklButton').style.opacity = "0";
+                            document.getElementById('prfButOpa').value = '0';
                         } else {
-                            document.getElementById('prfSklButton').style.opacity = "0.7";
+                            document.getElementById('prfSklButton').style.opacity = "1";
+                            document.getElementById('prfSklButton').style.backgroundColor = "blue";
+                            document.getElementById('prfButOpa').value = "1";
+                            document.getElementById('prfButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -230,10 +347,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="prsSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('prsSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('prsSklButton').style.opacity = "0.8";
+                            document.getElementById('prsSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('prsButOpa').value = "0.8";
+                            document.getElementById('prsButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('prsSklButton').style.opacity = "0";
+                            document.getElementById('prsButOpa').value = '0';
                         } else {
-                            document.getElementById('prsSklButton').style.opacity = "0.7";
+                            document.getElementById('prsSklButton').style.opacity = "1";
+                            document.getElementById('prsSklButton').style.backgroundColor = "blue";
+                            document.getElementById('prsButOpa').value = "1";
+                            document.getElementById('prsButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -246,10 +372,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="rlgSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('rlgSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('rlgSklButton').style.opacity = "0.8";
+                            document.getElementById('rlgSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('rlgButOpa').value = "0.8";
+                            document.getElementById('rlgButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('rlgSklButton').style.opacity = "0";
+                            document.getElementById('rlgButOpa').value = '0';
                         } else {
-                            document.getElementById('rlgSklButton').style.opacity = "0.7";
+                            document.getElementById('rlgSklButton').style.opacity = "1";
+                            document.getElementById('rlgSklButton').style.backgroundColor = "blue";
+                            document.getElementById('rlgButOpa').value = "1";
+                            document.getElementById('rlgButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -262,10 +397,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="sohSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('sohSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('sohSklButton').style.opacity = "0.8";
+                            document.getElementById('sohSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('sohButOpa').value = "0.8";
+                            document.getElementById('sohButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('sohSklButton').style.opacity = "0";
+                            document.getElementById('sohButOpa').value = '0';
                         } else {
-                            document.getElementById('sohSklButton').style.opacity = "0.7";
+                            document.getElementById('sohSklButton').style.opacity = "1";
+                            document.getElementById('sohSklButton').style.backgroundColor = "blue";
+                            document.getElementById('sohButOpa').value = "1";
+                            document.getElementById('sohButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -278,10 +422,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="sthSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('sthSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('sthSklButton').style.opacity = "0.8";
+                            document.getElementById('sthSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('sthButOpa').value = "0.8";
+                            document.getElementById('sthButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('sthSklButton').style.opacity = "0";
+                            document.getElementById('sthButOpa').value = '0';
                         } else {
-                            document.getElementById('sthSklButton').style.opacity = "0.7";
+                            document.getElementById('sthSklButton').style.opacity = "1";
+                            document.getElementById('sthSklButton').style.backgroundColor = "blue";
+                            document.getElementById('sthButOpa').value = "1";
+                            document.getElementById('sthButCol').value = "blue";
                         }
                     }}></button>
                 </div>
@@ -294,10 +447,19 @@ const SkillsBlock = props => {
                 <div className="STButtonBorder">
                     <button id="srvSklButton" onClick={() => {
                         let strengthSTButton = document.getElementById('srvSklButton');
-                        if (strengthSTButton.style.opacity == "0.7") {
+                        if (strengthSTButton.style.opacity == "1") {
+                            document.getElementById('srvSklButton').style.opacity = "0.8";
+                            document.getElementById('srvSklButton').style.backgroundColor = 'rgb(0, 195, 255)';
+                            document.getElementById('srvButOpa').value = "0.8";
+                            document.getElementById('srvButCol').value = 'rgb(0, 195, 255)';
+                        } else if (strengthSTButton.style.opacity == "0.8") {
                             document.getElementById('srvSklButton').style.opacity = "0";
+                            document.getElementById('srvButOpa').value = '0';
                         } else {
-                            document.getElementById('srvSklButton').style.opacity = "0.7";
+                            document.getElementById('srvSklButton').style.opacity = "1";
+                            document.getElementById('srvSklButton').style.backgroundColor = "blue";
+                            document.getElementById('srvButOpa').value = "1";
+                            document.getElementById('srvButCol').value = "blue";
                         }
                     }}></button>
                 </div>
