@@ -166,6 +166,7 @@ app.post('/getThisCharacter', characterController.getCharacter, (req, res) => {
 })
 
 app.post('/updateCharacter', characterController.updateCharacter, (req, res) => {
+  // console.log('at end of /updateCharacter');
   // const resChar = res.locals.characterid.toString();
   // res.redirect(url.format({
   //   pathname: "/character",
@@ -173,7 +174,10 @@ app.post('/updateCharacter', characterController.updateCharacter, (req, res) => 
   //     "char": resChar,
   //   }
   // }))
-  return res.status(200);
+  // return res.status(200);
+  // return console.log('at return of /updateCharacter');
+  // return res.redirect('back');
+  return res.status(200).redirect('back');
   // return res.send('after updateCharacter');
 })
 

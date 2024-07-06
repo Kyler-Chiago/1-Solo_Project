@@ -238,183 +238,282 @@ const CharacterSheet = () => {
             let hp = document.getElementById("hp");
             hp.value = characterData.hp;
 
-            let acrSklButton = document.getElementById("acrSklButton");
-            acrSklButton.style.opacity = characterData.acrButOpa;
-            acrSklButton.style.backgroundColor = characterData.acrButCol;
             let acrButOpa = document.getElementById("acrButOpa");
             acrButOpa.value = characterData.acrButOpa;
+            let acrSklButton = document.getElementById("acrSklButton");
             let acrButCol = document.getElementById("acrButCol");
-            acrButCol.value = characterData.acrButCol;
+            if (acrButOpa.value == "1") {
+                acrSklButton.style.backgroundColor = characterData.profButCol;
+                acrButCol.value = characterData.profButCol;
+            } else {
+                acrSklButton.style.backgroundColor = characterData.exprButCol;
+                acrButCol.value = characterData.exprButCol;
+            }
+            acrSklButton.style.opacity = characterData.acrButOpa;
 
-
-            let AniSklButton = document.getElementById("AniSklButton");
-            AniSklButton.style.opacity = characterData.aniButOpa;
-            AniSklButton.style.backgroundColor = characterData.aniButCol;
             let aniButOpa = document.getElementById("aniButOpa");
             aniButOpa.value = characterData.aniButOpa;
+            let AniSklButton = document.getElementById("AniSklButton");
             let aniButCol = document.getElementById("aniButCol");
-            aniButCol.value = characterData.aniButCol;
+            if (aniButOpa.value == "1") {
+                AniSklButton.style.backgroundColor = characterData.profButCol;
+                aniButCol.value = characterData.profButCol;
+            } else {
+                AniSklButton.style.backgroundColor = characterData.exprButCol;
+                aniButCol.value = characterData.exprButCol;
+            }
+            AniSklButton.style.opacity = characterData.aniButOpa;
 
-            let ArcSklButton = document.getElementById("ArcSklButton");
-            ArcSklButton.style.opacity = characterData.arcButOpa;
-            ArcSklButton.style.backgroundColor = characterData.arcButCol;
             let arcButOpa = document.getElementById("arcButOpa");
             arcButOpa.value = characterData.arcButOpa;
+            let ArcSklButton = document.getElementById("ArcSklButton");
             let arcButCol = document.getElementById("arcButCol");
-            arcButCol.value = characterData.arcButCol;
+            if (arcButOpa.value == "1") {
+                ArcSklButton.style.backgroundColor = characterData.profButCol;
+                arcButCol.value = characterData.profButCol;
+            } else {
+                ArcSklButton.style.backgroundColor = characterData.exprButCol;
+                arcButCol.value = characterData.exprButCol;
+            }
+            ArcSklButton.style.opacity = characterData.arcButOpa;
 
-            let AthSklButton = document.getElementById("AthSklButton");
-            AthSklButton.style.opacity = characterData.athButOpa;
-            AthSklButton.style.backgroundColor = characterData.athButCol;
             let athButOpa = document.getElementById("athButOpa");
             athButOpa.value = characterData.athButOpa;
+            let AthSklButton = document.getElementById("AthSklButton");
             let athButCol = document.getElementById("athButCol");
-            athButCol.value = characterData.athButCol;
+            if (athButOpa.value == "1") {
+                AthSklButton.style.backgroundColor = characterData.profButCol;
+                athButCol.value = characterData.profButCol;
+            } else {
+                AthSklButton.style.backgroundColor = characterData.exprButCol;
+                athButCol.value = characterData.exprButCol;
+            }
+            AthSklButton.style.opacity = characterData.athButOpa;
 
-            let decSklButton = document.getElementById("decSklButton");
-            decSklButton.style.opacity = characterData.decButOpa;
-            decSklButton.style.backgroundColor = characterData.decButCol;
             let decButOpa = document.getElementById("decButOpa");
             decButOpa.value = characterData.decButOpa;
+            let decSklButton = document.getElementById("decSklButton");
             let decButCol = document.getElementById("decButCol");
-            decButCol.value = characterData.decButCol;
+            if (decButOpa.value == "1") {
+                decSklButton.style.backgroundColor = characterData.profButCol;
+                decButCol.value = characterData.profButCol;
+            } else {
+                decSklButton.style.backgroundColor = characterData.exprButCol;
+                decButCol.value = characterData.exprButCol;
+            }
+            decSklButton.style.opacity = characterData.decButOpa;
 
-            let hisSklButton = document.getElementById("hisSklButton");
-            hisSklButton.style.opacity = characterData.hisButOpa;
-            hisSklButton.style.backgroundColor = characterData.hisButCol;
             let hisButOpa = document.getElementById("hisButOpa");
             hisButOpa.value = characterData.hisButOpa;
+            let hisSklButton = document.getElementById("hisSklButton");
             let hisButCol = document.getElementById("hisButCol");
-            hisButCol.value = characterData.hisButCol;
+            if (hisButOpa.value == "1") {
+                hisSklButton.style.backgroundColor = characterData.profButCol;
+                hisButCol.value = characterData.profButCol;
+            } else {
+                hisSklButton.style.backgroundColor = characterData.exprButCol;
+                hisButCol.value = characterData.exprButCol;
+            }
+            hisSklButton.style.opacity = characterData.hisButOpa;
 
-            let insSklButton = document.getElementById("insSklButton");
-            insSklButton.style.opacity = characterData.insButOpa;
-            insSklButton.style.backgroundColor = characterData.insButCol;
             let insButOpa = document.getElementById("insButOpa");
             insButOpa.value = characterData.insButOpa;
+            // console.log(insButOpa.value);
+            let insSklButton = document.getElementById("insSklButton");
             let insButCol = document.getElementById("insButCol");
-            insButCol.value = characterData.insButCol;
+            if (insButOpa.value == "1") {
+                insButCol.value = characterData.insButCol;
+                insSklButton.style.backgroundColor = characterData.profButCol;
+            } else {
+                insSklButton.style.backgroundColor = characterData.exprButCol;
+                insButCol.value = characterData.insButCol;
+            }
+            insSklButton.style.opacity = characterData.insButOpa;
 
-            let intSklButton = document.getElementById("intSklButton");
-            intSklButton.style.opacity = characterData.intButOpa;
-            intSklButton.style.backgroundColor = characterData.intButCol;
             let intButOpa = document.getElementById("intButOpa");
             intButOpa.value = characterData.intButOpa;
+            let intSklButton = document.getElementById("intSklButton");
             let intButCol = document.getElementById("intButCol");
-            intButCol.value = characterData.intButCol;
+            if (intButOpa.value == "1") {
+                intSklButton.style.backgroundColor = characterData.profButCol;
+                intButCol.value = characterData.profButCol;
+            } else {
+                intSklButton.style.backgroundColor = characterData.exprButCol;
+                intButCol.value = characterData.exprButCol;
+            }
+            intSklButton.style.opacity = characterData.intButOpa;
 
-            let invSklButton = document.getElementById("invSklButton");
-            invSklButton.style.opacity = characterData.invButOpa;
-            invSklButton.style.backgroundColor = characterData.invButCol;
             let invButOpa = document.getElementById("invButOpa");
             invButOpa.value = characterData.invButOpa;
+            let invSklButton = document.getElementById("invSklButton");
             let invButCol = document.getElementById("invButCol");
-            invButCol.value = characterData.invButCol;
+            if (invButOpa.value == "1") {
+                invSklButton.style.backgroundColor = characterData.profButCol;
+                invButCol.value = characterData.profButCol;
+            } else {
+                invSklButton.style.backgroundColor = characterData.exprButCol;
+                invButCol.value = characterData.exprButCol;
+            }
+            invSklButton.style.opacity = characterData.invButOpa;
 
-            let medSklButton = document.getElementById("medSklButton");
-            medSklButton.style.opacity = characterData.medButOpa;
-            medSklButton.style.backgroundColor = characterData.medButCol;
             let medButOpa = document.getElementById("medButOpa");
             medButOpa.value = characterData.medButOpa;
+            let medSklButton = document.getElementById("medSklButton");
             let medButCol = document.getElementById("medButCol");
-            medButCol.value = characterData.medButCol;
+            if (medButOpa.value == "1") {
+                medSklButton.style.backgroundColor = characterData.profButCol;
+                medButCol.value = characterData.profButCol;
+            } else {
+                medSklButton.style.backgroundColor = characterData.exprButCol;
+                medButCol.value = characterData.exprButCol;
+            }
+            medSklButton.style.opacity = characterData.medButOpa;
 
-            let ntrSklButton = document.getElementById("ntrSklButton");
-            ntrSklButton.style.opacity = characterData.ntrButOpa;
-            ntrSklButton.style.backgroundColor = characterData.ntrButCol;
             let ntrButOpa = document.getElementById("ntrButOpa");
             ntrButOpa.value = characterData.ntrButOpa;
+            let ntrSklButton = document.getElementById("ntrSklButton");
             let ntrButCol = document.getElementById("ntrButCol");
-            ntrButCol.value = characterData.ntrButCol;
+            if (ntrButOpa.value == "1") {
+                ntrSklButton.style.backgroundColor = characterData.profButCol;
+                ntrButCol.value = characterData.profButCol;
+            } else {
+                ntrSklButton.style.backgroundColor = characterData.exprButCol;
+                ntrButCol.value = characterData.exprButCol;
+            }
+            ntrSklButton.style.opacity = characterData.ntrButOpa;
 
-            let perSklButton = document.getElementById("perSklButton");
-            perSklButton.style.opacity = characterData.perButOpa;
-            perSklButton.style.backgroundColor = characterData.perButCol;
             let perButOpa = document.getElementById("perButOpa");
             perButOpa.value = characterData.perButOpa;
+            let perSklButton = document.getElementById("perSklButton");
             let perButCol = document.getElementById("perButCol");
-            perButCol.value = characterData.perButCol;
+            if (perButOpa.value == "1") {
+                perSklButton.style.backgroundColor = characterData.profButCol;
+                perButCol.value = characterData.profButCol;
+            } else {
+                perSklButton.style.backgroundColor = characterData.exprButCol;
+                perButCol.value = characterData.exprButCol;
+            }
+            perSklButton.style.opacity = characterData.perButOpa;
 
-            let prfSklButton = document.getElementById("prfSklButton");
-            prfSklButton.style.opacity = characterData.prfButOpa;
-            prfSklButton.style.backgroundColor = characterData.prfButCol;
             let prfButOpa = document.getElementById("prfButOpa");
             prfButOpa.value = characterData.prfButOpa;
+            let prfSklButton = document.getElementById("prfSklButton");
             let prfButCol = document.getElementById("prfButCol");
-            prfButCol.value = characterData.prfButCol;
+            if (prfButOpa.value == "1") {
+                prfSklButton.style.backgroundColor = characterData.profButCol;
+                prfButCol.value = characterData.profButCol;
+            } else {
+                prfSklButton.style.backgroundColor = characterData.exprButCol;
+                prfButCol.value = characterData.exprButCol;
+            }
+            prfSklButton.style.opacity = characterData.prfButOpa;
 
-            let prsSklButton = document.getElementById("prsSklButton");
-            prsSklButton.style.opacity = characterData.prsButOpa;
-            prsSklButton.style.backgroundColor = characterData.prsButCol;
             let prsButOpa = document.getElementById("prsButOpa");
             prsButOpa.value = characterData.prsButOpa;
+            let prsSklButton = document.getElementById("prsSklButton");
             let prsButCol = document.getElementById("prsButCol");
-            prsButCol.value = characterData.prsButCol;
+            if (prsButOpa.value == "1") {
+                prsSklButton.style.backgroundColor = characterData.profButCol;
+                prsButCol.value = characterData.profButCol;
+            } else {
+                prsSklButton.style.backgroundColor = characterData.exprButCol;
+                prsButCol.value = characterData.exprButCol;
+            }
+            prsSklButton.style.opacity = characterData.prsButOpa;
 
-            let rlgSklButton = document.getElementById("rlgSklButton");
-            rlgSklButton.style.opacity = characterData.rlgButOpa;
-            rlgSklButton.style.backgroundColor = characterData.rlgButCol;
             let rlgButOpa = document.getElementById("rlgButOpa");
             rlgButOpa.value = characterData.rlgButOpa;
+            let rlgSklButton = document.getElementById("rlgSklButton");
             let rlgButCol = document.getElementById("rlgButCol");
-            rlgButCol.value = characterData.rlgButCol;
+            if (rlgButOpa.value == "1") {
+                rlgSklButton.style.backgroundColor = characterData.profButCol;
+                rlgButCol.value = characterData.profButCol;
+            } else {
+                rlgSklButton.style.backgroundColor = characterData.exprButCol;
+                rlgButCol.value = characterData.exprButCol;
+            }
+            rlgSklButton.style.opacity = characterData.rlgButOpa;
 
-            let sohSklButton = document.getElementById("sohSklButton");
-            sohSklButton.style.opacity = characterData.sohButOpa;
-            sohSklButton.style.backgroundColor = characterData.sohButCol;
             let sohButOpa = document.getElementById("sohButOpa");
             sohButOpa.value = characterData.sohButOpa;
+            let sohSklButton = document.getElementById("sohSklButton");
             let sohButCol = document.getElementById("sohButCol");
-            sohButCol.value = characterData.sohButCol;
+            if (sohButOpa.value == "1") {
+                sohSklButton.style.backgroundColor = characterData.profButCol;
+                sohButCol.value = characterData.profButCol;
+            } else {
+                sohSklButton.style.backgroundColor = characterData.exprButCol;
+                sohButCol.value = characterData.exprButCol;
+            }
+            sohSklButton.style.opacity = characterData.sohButOpa;
 
-            let sthSklButton = document.getElementById("sthSklButton");
-            sthSklButton.style.opacity = characterData.sthButOpa;
-            sthSklButton.style.backgroundColor = characterData.sthButCol;
             let sthButOpa = document.getElementById("sthButOpa");
             sthButOpa.value = characterData.sthButOpa;
+            let sthSklButton = document.getElementById("sthSklButton");
             let sthButCol = document.getElementById("sthButCol");
-            sthButCol.value = characterData.sthButCol;
+            if (sthButOpa.value == "1") {
+                sthSklButton.style.backgroundColor = characterData.profButCol;
+                sthButCol.value = characterData.profButCol;
+            } else {
+                sthSklButton.style.backgroundColor = characterData.exprButCol;
+                sthButCol.value = characterData.exprButCol;
+            }
+            sthSklButton.style.opacity = characterData.sthButOpa;
 
-            let srvSklButton = document.getElementById("srvSklButton");
-            srvSklButton.style.opacity = characterData.srvButOpa;
-            srvSklButton.style.backgroundColor = characterData.srvButCol;
+
+
             let srvButOpa = document.getElementById("srvButOpa");
             srvButOpa.value = characterData.srvButOpa;
+            let srvSklButton = document.getElementById("srvSklButton");
             let srvButCol = document.getElementById("srvButCol");
-            srvButCol.value = characterData.srvButCol;
+            if (srvButOpa.value == "1") {
+                srvSklButton.style.backgroundColor = characterData.profButCol;
+                srvButCol.value = characterData.profButCol;
+            } else {
+                srvSklButton.style.backgroundColor = characterData.exprButCol;
+                srvButCol.value = characterData.exprButCol;
+            }
+            srvSklButton.style.opacity = characterData.srvButOpa;
 
             let inspirationButton = document.getElementById("inspirationButton");
             inspirationButton.style.opacity = characterData.inspButOpa;
+            inspirationButton.style.backgroundColor = characterData.profButCol;
             let inspButOpa = document.getElementById('inspButOpa');
             inspButOpa.value = characterData.inspButOpa;
 
             let strengthSTButton = document.getElementById("strengthSTButton");
             strengthSTButton.style.opacity = characterData.strSTButOpa;
+            strengthSTButton.style.backgroundColor = characterData.profButCol;
             let strSTButOpa = document.getElementById('strSTButOpa');
             strSTButOpa.value = characterData.strSTButOpa;
 
             let dexteritySTButton = document.getElementById("dexteritySTButton");
             dexteritySTButton.style.opacity = characterData.dexSTButOpa;
+            dexteritySTButton.style.backgroundColor = characterData.profButCol;
             let dexSTButOpa = document.getElementById('dexSTButOpa');
             dexSTButOpa.value = characterData.dexSTButOpa;
 
             let constitutionSTButton = document.getElementById("constitutionSTButton");
             constitutionSTButton.style.opacity = characterData.conSTButOpa;
+            constitutionSTButton.style.backgroundColor = characterData.profButCol;
             let conSTButOpa = document.getElementById('conSTButOpa');
             conSTButOpa.value = characterData.conSTButOpa;
 
             let intelligenceSTButton = document.getElementById("intelligenceSTButton");
             intelligenceSTButton.style.opacity = characterData.intSTButOpa;
+            intelligenceSTButton.style.backgroundColor = characterData.profButCol;
             let intSTButOpa = document.getElementById('intSTButOpa');
             intSTButOpa.value = characterData.intSTButOpa;
 
             let wisdomSTButton = document.getElementById("wisdomSTButton");
             wisdomSTButton.style.opacity = characterData.wisSTButOpa;
+            wisdomSTButton.style.backgroundColor = characterData.profButCol;
             let wisSTButOpa = document.getElementById('wisSTButOpa');
             wisSTButOpa.value = characterData.wisSTButOpa;
 
             let charismaSTButton = document.getElementById("charismaSTButton");
             charismaSTButton.style.opacity = characterData.chaSTButOpa;
+            charismaSTButton.style.backgroundColor = characterData.profButCol;
             let chaSTButOpa = document.getElementById('chaSTButOpa');
             chaSTButOpa.value = characterData.chaSTButOpa;
 
@@ -495,6 +594,59 @@ const CharacterSheet = () => {
 
             let featTrtInp = document.getElementById('featTrtInp');
             featTrtInp.value = characterData.featTrtInp;
+
+            let borderColor = document.getElementById('borderColor');
+            borderColor.value = characterData.borderColor;
+            let borderColors = document.getElementsByClassName("changeBorderColor");
+            for (let borderColor of borderColors) {
+                borderColor.style.borderColor = document.getElementById('borderColor').value;
+            }
+            let equipmentMonBorders = document.getElementsByClassName("cB3MonNam");
+            for (let equipmentMonBorder of equipmentMonBorders) {
+                equipmentMonBorder.style.backgroundColor = document.getElementById('borderColor').value;
+            }
+
+            let fontColor = document.getElementById('fontColor');
+            fontColor.value = characterData.fontColor;
+            let fontColors = document.getElementsByClassName("changeFontColor");
+            for (let fontColor of fontColors) {
+                fontColor.style.color = document.getElementById('fontColor').value;
+            }
+
+            let abiScBgCol = document.getElementById('abiScBgCol');
+            abiScBgCol.value = characterData.abiScBgCol;
+            let abiScBgCols = document.getElementsByClassName("changeAbiScBgCol");
+            for (let abiScBgCol of abiScBgCols) {
+                abiScBgCol.style.backgroundColor = document.getElementById('abiScBgCol').value;
+            }
+
+            let boxBgCol = document.getElementById('boxBgCol');
+            boxBgCol.value = characterData.boxBgCol;
+            let boxBgCols = document.getElementsByClassName("changeBgColor");
+            function hexToRgb(hex) {
+                var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+                return result ? {
+                    r: parseInt(result[1], 16),
+                    g: parseInt(result[2], 16),
+                    b: parseInt(result[3], 16)
+                } : null;
+            }
+            for (let boxBgCol of boxBgCols) {
+                // Converting the given hex value for the color to rgb so we can use rgba and an opacity, at an opacity of 0.5
+                // could probably set this up with another input text field for the opacity and pass the opacity value in here
+                boxBgCol.style.backgroundColor = "rgba(" + hexToRgb(document.getElementById('boxBgCol').value).r + ", " + hexToRgb(document.getElementById('boxBgCol').value).g + ", " + hexToRgb(document.getElementById('boxBgCol').value).b + ", 0.5)"
+            }
+            let boxBgColsInputs = document.getElementsByClassName("changeBgColorInputs");
+            for (let boxBgColInput of boxBgColsInputs) {
+                // 0.2 opacity instead of 0.5
+                boxBgColInput.style.backgroundColor = "rgba(" + hexToRgb(document.getElementById('boxBgCol').value).r + ", " + hexToRgb(document.getElementById('boxBgCol').value).g + ", " + hexToRgb(document.getElementById('boxBgCol').value).b + ", 0.2)"
+            }
+
+            let profButCol = document.getElementById('profButCol');
+            profButCol.value = characterData.profButCol;
+
+            let exprButCol = document.getElementById('exprButCol');
+            exprButCol.value = characterData.exprButCol;
         }
     }
 
@@ -511,36 +663,36 @@ const CharacterSheet = () => {
                         <div className="page1Header">
                             <div className="characterName">
                                 <div className="characterNameContainer">
-                                    <input name="charName" type="text" placeholder="" className="charNameInputOver" form="saveCharacter" id="charName" ></input>
-                                    <span className="charNameTextUnder">Character Name</span>
+                                    <input name="charName" type="text" placeholder="" className="charNameInputOver changeFontColor changeBgColor changeBorderColor" form="saveCharacter" id="charName" ></input>
+                                    <span className="charNameTextUnder changeFontColor">Character Name</span>
                                 </div>
                             </div>
                             <div className="characterBasics">
-                                <div className="classLevel changeBorderColor">
-                                    <div className="charBasicsTextClass">Class</div>
-                                    <div className="charBasicsTextLev">Level</div>
-                                    <input name="charClass" type="text" placeholder="" className="charBasicsFormClass" form="saveCharacter" id="charClass"></input>
-                                    <input name="charLev" type="text" placeholder="" className="charBasicsFormLev" form="saveCharacter" id="charLev"></input>
+                                <div className="classLevel changeBorderColor changeBgColor">
+                                    <div className="charBasicsTextClass changeFontColor">Class</div>
+                                    <div className="charBasicsTextLev changeFontColor">Level</div>
+                                    <input name="charClass" type="text" placeholder="" className="charBasicsFormClass changeFontColor changeBorderColor changeBgColorInputs" form="saveCharacter" id="charClass"></input>
+                                    <input name="charLev" type="text" placeholder="" className="charBasicsFormLev changeFontColor changeBorderColor changeBgColorInputs" form="saveCharacter" id="charLev"></input>
                                 </div>
-                                <div className="background changeBorderColor">
-                                    <input name="charBack" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="charBack"></input>
-                                    <div className="charBasicsText">Background</div>
+                                <div className="background changeBorderColor changeBgColor">
+                                    <input name="charBack" type="text" placeholder="" className="charBasicsForm changeFontColor changeBorderColor changeBgColorInputs" form="saveCharacter" id="charBack"></input>
+                                    <div className="charBasicsText changeFontColor">Background</div>
                                 </div>
-                                <div className="playerName changeBorderColor">
-                                    <div className="charBasicsText">Player</div>
-                                    <input name="player" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="player"></input>
+                                <div className="playerName changeBorderColor changeBgColor">
+                                    <div className="charBasicsText changeFontColor">Player</div>
+                                    <input name="player" type="text" placeholder="" className="charBasicsForm changeFontColor changeBorderColor changeBgColorInputs" form="saveCharacter" id="player"></input>
                                 </div>
-                                <div className="race changeBorderColor">
-                                    <div className="charBasicsText">Race</div>
-                                    <input name="race" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="race"></input>
+                                <div className="race changeBorderColor changeBgColor">
+                                    <div className="charBasicsText changeFontColor">Race</div>
+                                    <input name="race" type="text" placeholder="" className="charBasicsForm changeFontColor changeBorderColor changeBgColorInputs" form="saveCharacter" id="race"></input>
                                 </div>
-                                <div className="alignment changeBorderColor">
-                                    <div className="charBasicsText">Alignment</div>
-                                    <input name="align" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="align"></input>
+                                <div className="alignment changeBorderColor changeBgColor">
+                                    <div className="charBasicsText changeFontColor">Alignment</div>
+                                    <input name="align" type="text" placeholder="" className="charBasicsForm changeFontColor changeBorderColor changeBgColorInputs" form="saveCharacter" id="align"></input>
                                 </div>
-                                <div className="exp changeBorderColor">
-                                    <div className="charBasicsText">Experience</div>
-                                    <input name="exp" type="text" placeholder="" className="charBasicsForm" form="saveCharacter" id="exp"></input>
+                                <div className="exp changeBorderColor changeBgColor">
+                                    <div className="charBasicsText changeFontColor">Experience</div>
+                                    <input name="exp" type="text" placeholder="" className="charBasicsForm changeFontColor changeBorderColor changeBgColorInputs" form="saveCharacter" id="exp"></input>
                                 </div>
                             </div>
                         </div>
@@ -549,11 +701,11 @@ const CharacterSheet = () => {
                                 <div className="leftBlockRow">
                                     <div className="statColumn">
                                         <div className="stat">
-                                            <div className="statBorder changeBorderColor">
+                                            <div className="statBorder changeBorderColor changeBgColor">
 
                                             </div>
                                             <div className="ability changeBorderColor">
-                                                <span className="centerText">Strength</span>
+                                                <span className="centerText changeFontColor">Strength</span>
                                             </div>
                                             <div className="abilityModifier">
                                                 {/* <span id="strengthModCalc"></span> */}
@@ -561,16 +713,17 @@ const CharacterSheet = () => {
                                             <div className="abilityScoreBox">
                                                 <div className="abilityScore changeBorderColor">
                                                     {/* <span >20</span> */}
-                                                    <input name="strAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="strAbi"></input>
+                                                    <input name="strAbi" type="text" placeholder="" className="strengthAbilityInput changeFontColor changeAbiScBgCol" form="saveCharacter" id="strAbi"></input>
                                                 </div>
-                                            </div>
-                                            <input name="strMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="strMod"></input>
-                                        </div>
-                                        <div className="stat">
-                                            <div className="statBorder changeBorderColor">
 
                                             </div>
-                                            <div className="ability changeBorderColor">
+                                            <input name="strMod" type="text" placeholder="" className="abiMod changeFontColor" form="saveCharacter" id="strMod"></input>
+                                        </div>
+                                        <div className="stat">
+                                            <div className="statBorder changeBorderColor changeBgColor">
+
+                                            </div>
+                                            <div className="ability changeBorderColor changeFontColor">
                                                 <span>Dexterity</span>
                                             </div>
                                             <div className="abilityModifier">
@@ -578,16 +731,16 @@ const CharacterSheet = () => {
                                             </div>
                                             <div className="abilityScoreBox">
                                                 <div className="abilityScore changeBorderColor">
-                                                    <input name="dexAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="dexAbi"></input>
+                                                    <input name="dexAbi" type="text" placeholder="" className="strengthAbilityInput changeFontColor changeAbiScBgCol" form="saveCharacter" id="dexAbi"></input>
                                                 </div>
                                             </div>
-                                            <input name="dexMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="dexMod"></input>
+                                            <input name="dexMod" type="text" placeholder="" className="abiMod changeFontColor" form="saveCharacter" id="dexMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder changeBorderColor">
+                                            <div className="statBorder changeBorderColor changeBgColor">
 
                                             </div>
-                                            <div className="ability changeBorderColor">
+                                            <div className="ability changeBorderColor changeFontColor">
                                                 <span className="centerText">Constitution</span>
                                             </div>
                                             <div className="abilityModifier">
@@ -595,16 +748,16 @@ const CharacterSheet = () => {
                                             </div>
                                             <div className="abilityScoreBox">
                                                 <div className="abilityScore changeBorderColor">
-                                                    <input name="conAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="conAbi"></input>
+                                                    <input name="conAbi" type="text" placeholder="" className="strengthAbilityInput changeFontColor changeAbiScBgCol" form="saveCharacter" id="conAbi"></input>
                                                 </div>
                                             </div>
-                                            <input name="conMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="conMod"></input>
+                                            <input name="conMod" type="text" placeholder="" className="abiMod changeFontColor" form="saveCharacter" id="conMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder changeBorderColor">
+                                            <div className="statBorder changeBorderColor changeBgColor">
 
                                             </div>
-                                            <div className="ability changeBorderColor">
+                                            <div className="ability changeBorderColor changeFontColor">
                                                 <span>Intelligence</span>
                                             </div>
                                             <div className="abilityModifier">
@@ -612,16 +765,16 @@ const CharacterSheet = () => {
                                             </div>
                                             <div className="abilityScoreBox">
                                                 <div className="abilityScore changeBorderColor">
-                                                    <input name="intAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="intAbi"></input>
+                                                    <input name="intAbi" type="text" placeholder="" className="strengthAbilityInput changeFontColor changeAbiScBgCol" form="saveCharacter" id="intAbi"></input>
                                                 </div>
                                             </div>
-                                            <input name="intMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="intMod"></input>
+                                            <input name="intMod" type="text" placeholder="" className="abiMod changeFontColor" form="saveCharacter" id="intMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder changeBorderColor">
+                                            <div className="statBorder changeBorderColor changeBgColor">
 
                                             </div>
-                                            <div className="ability changeBorderColor">
+                                            <div className="ability changeBorderColor changeFontColor">
                                                 <span>Wisdom</span>
                                             </div>
                                             <div className="abilityModifier">
@@ -629,16 +782,16 @@ const CharacterSheet = () => {
                                             </div>
                                             <div className="abilityScoreBox">
                                                 <div className="abilityScore changeBorderColor">
-                                                    <input name="wisAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="wisAbi"></input>
+                                                    <input name="wisAbi" type="text" placeholder="" className="strengthAbilityInput changeFontColor changeAbiScBgCol" form="saveCharacter" id="wisAbi"></input>
                                                 </div>
                                             </div>
-                                            <input name="wisMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="wisMod"></input>
+                                            <input name="wisMod" type="text" placeholder="" className="abiMod changeFontColor" form="saveCharacter" id="wisMod"></input>
                                         </div>
                                         <div className="stat">
-                                            <div className="statBorder changeBorderColor">
+                                            <div className="statBorder changeBorderColor changeBgColor">
 
                                             </div>
-                                            <div className="ability changeBorderColor">
+                                            <div className="ability changeBorderColor changeFontColor">
                                                 <span>Charisma</span>
                                             </div>
                                             <div className="abilityModifier">
@@ -646,16 +799,16 @@ const CharacterSheet = () => {
                                             </div>
                                             <div className="abilityScoreBox">
                                                 <div className="abilityScore changeBorderColor">
-                                                    <input name="chaAbi" type="text" placeholder="" className="strengthAbilityInput" form="saveCharacter" id="chaAbi"></input>
+                                                    <input name="chaAbi" type="text" placeholder="" className="strengthAbilityInput changeFontColor changeAbiScBgCol" form="saveCharacter" id="chaAbi"></input>
                                                 </div>
                                             </div>
-                                            <input name="chaMod" type="text" placeholder="" className="abiMod" form="saveCharacter" id="chaMod"></input>
+                                            <input name="chaMod" type="text" placeholder="" className="abiMod changeFontColor" form="saveCharacter" id="chaMod"></input>
                                         </div>
                                     </div>
                                     <div className="skills">
                                         <div className="inspirationBlock">
                                             <div className="inspirationCheck changeBorderColor">
-                                                <button id="inspirationButton" onClick={() => {
+                                                <button id="inspirationButton" className="changeBorderColor changeButCol" onClick={() => {
                                                     let inspirationButton = document.getElementById('inspirationButton');
                                                     if (inspirationButton.style.opacity == "0.7") {
                                                         document.getElementById('inspirationButton').style.opacity = "0";
@@ -666,22 +819,22 @@ const CharacterSheet = () => {
                                                     }
                                                 }}></button>
                                             </div>
-                                            <div className="inspirationText changeBorderColor">
+                                            <div className="inspirationText changeBorderColor changeFontColor changeBgColor">
                                                 Inspiration
                                             </div>
                                         </div>
                                         <div className="profBonusBlock">
-                                            <div className="profCheck changeBorderColor">
-                                                <input name="profBon" type="text" placeholder="" className="profCheckInput" form="saveCharacter" id="profBon"></input>
+                                            <div className="profCheck changeBorderColor changeBgColor">
+                                                <input name="profBon" type="text" placeholder="" className="profCheckInput changeFontColor changeBorderColor" form="saveCharacter" id="profBon"></input>
                                             </div>
-                                            <div className="profText changeBorderColor">
+                                            <div className="profText changeBorderColor changeFontColor changeBgColor">
                                                 Proficiency Bonus
                                             </div>
                                         </div>
                                         <div className="savingThrowsBlock">
-                                            <div className="strengthST changeBorderColor">
+                                            <div className="strengthST changeBorderColor changeBgColor">
                                                 <div className="STButtonBorder">
-                                                    <button id="strengthSTButton" onClick={() => {
+                                                    <button id="strengthSTButton" className="changeButCol" onClick={() => {
                                                         let strengthSTButton = document.getElementById('strengthSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('strengthSTButton').style.opacity = "0";
@@ -692,14 +845,14 @@ const CharacterSheet = () => {
                                                         }
                                                     }}></button>
                                                 </div>
-                                                <input name="strSav" type="text" placeholder="" className="strengthSTInput" form="saveCharacter" id="strSav"></input>
-                                                <div className="STText">
+                                                <input name="strSav" type="text" placeholder="" className="strengthSTInput changeFontColor" form="saveCharacter" id="strSav"></input>
+                                                <div className="STText changeFontColor">
                                                     Strength
                                                 </div>
                                             </div>
-                                            <div className="midST dexterityST changeBorderColor">
+                                            <div className="midST dexterityST changeBorderColor changeBgColor">
                                                 <div className="STButtonBorder">
-                                                    <button id="dexteritySTButton" onClick={() => {
+                                                    <button id="dexteritySTButton" className="changeButCol" onClick={() => {
                                                         let strengthSTButton = document.getElementById('dexteritySTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('dexteritySTButton').style.opacity = "0";
@@ -710,14 +863,14 @@ const CharacterSheet = () => {
                                                         }
                                                     }}></button>
                                                 </div>
-                                                <input name="dexSav" type="text" placeholder="" className="dexteritySTInput" form="saveCharacter" id="dexSav"></input>
-                                                <div className="STText">
+                                                <input name="dexSav" type="text" placeholder="" className="dexteritySTInput changeFontColor" form="saveCharacter" id="dexSav"></input>
+                                                <div className="STText changeFontColor">
                                                     Dexterity
                                                 </div>
                                             </div>
-                                            <div className="midST conST changeBorderColor">
+                                            <div className="midST conST changeBorderColor changeBgColor">
                                                 <div className="STButtonBorder">
-                                                    <button id="constitutionSTButton" onClick={() => {
+                                                    <button id="constitutionSTButton" className="changeButCol" onClick={() => {
                                                         let strengthSTButton = document.getElementById('constitutionSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('constitutionSTButton').style.opacity = "0";
@@ -728,14 +881,14 @@ const CharacterSheet = () => {
                                                         }
                                                     }}></button>
                                                 </div>
-                                                <input name="conSav" type="text" placeholder="" className="constitutionSTInput" form="saveCharacter" id="conSav"></input>
-                                                <div className="STText">
+                                                <input name="conSav" type="text" placeholder="" className="constitutionSTInput changeFontColor" form="saveCharacter" id="conSav"></input>
+                                                <div className="STText changeFontColor">
                                                     Constitution
                                                 </div>
                                             </div>
-                                            <div className="midST intelligenceST changeBorderColor">
+                                            <div className="midST intelligenceST changeBorderColor changeBgColor">
                                                 <div className="STButtonBorder">
-                                                    <button id="intelligenceSTButton" onClick={() => {
+                                                    <button id="intelligenceSTButton" className="changeButCol" onClick={() => {
                                                         let strengthSTButton = document.getElementById('intelligenceSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('intelligenceSTButton').style.opacity = "0";
@@ -746,14 +899,14 @@ const CharacterSheet = () => {
                                                         }
                                                     }}></button>
                                                 </div>
-                                                <input name="intSav" type="text" placeholder="" className="intelligenceSTInput" form="saveCharacter" id="intSav"></input>
-                                                <div className="STText">
+                                                <input name="intSav" type="text" placeholder="" className="intelligenceSTInput changeFontColor" form="saveCharacter" id="intSav"></input>
+                                                <div className="STText changeFontColor">
                                                     Intelligence
                                                 </div>
                                             </div>
-                                            <div className="midST wisdomST changeBorderColor">
+                                            <div className="midST wisdomST changeBorderColor changeBgColor">
                                                 <div className="STButtonBorder">
-                                                    <button id="wisdomSTButton" onClick={() => {
+                                                    <button id="wisdomSTButton" className="changeButCol" onClick={() => {
                                                         let strengthSTButton = document.getElementById('wisdomSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('wisdomSTButton').style.opacity = "0";
@@ -764,14 +917,14 @@ const CharacterSheet = () => {
                                                         }
                                                     }}></button>
                                                 </div>
-                                                <input name="wisSav" type="text" placeholder="" className="wisdomSTInput" form="saveCharacter" id="wisSav"></input>
-                                                <div className="STText">
+                                                <input name="wisSav" type="text" placeholder="" className="wisdomSTInput changeFontColor" form="saveCharacter" id="wisSav"></input>
+                                                <div className="STText changeFontColor">
                                                     Wisdom
                                                 </div>
                                             </div>
-                                            <div className="charismaST changeBorderColor">
+                                            <div className="charismaST changeBorderColor changeBgColor">
                                                 <div className="STButtonBorder">
-                                                    <button id="charismaSTButton" onClick={() => {
+                                                    <button id="charismaSTButton" className="changeButCol" onClick={() => {
                                                         let strengthSTButton = document.getElementById('charismaSTButton');
                                                         if (strengthSTButton.style.opacity == "0.7") {
                                                             document.getElementById('charismaSTButton').style.opacity = "0";
@@ -782,13 +935,13 @@ const CharacterSheet = () => {
                                                         }
                                                     }}></button>
                                                 </div>
-                                                <input name="chaSav" type="text" placeholder="" className="charismaSTInput" form="saveCharacter" id="chaSav"></input>
-                                                <div className="STText">
+                                                <input name="chaSav" type="text" placeholder="" className="charismaSTInput changeFontColor" form="saveCharacter" id="chaSav"></input>
+                                                <div className="STText changeFontColor">
                                                     Charisma
                                                 </div>
                                             </div>
-                                            <div className="savingThrowsST changeBorderColor">
-                                                <div className="savingThrowsSTText">
+                                            <div className="savingThrowsST changeBorderColor changeBgColor">
+                                                <div className="savingThrowsSTText changeFontColor">
                                                     {/* <span>Saving Throws</span> */}
                                                     Saving Throws
                                                 </div>
@@ -803,9 +956,9 @@ const CharacterSheet = () => {
                                 </div>
                                 <div className="l3">
                                     < PWisBlock />
-                                    <div className="l3OPaL changeBorderColor">
-                                        <textarea name="oPandL" type="text" placeholder="" className="oPandL" form="saveCharacter" id="oPandL"></textarea>
-                                        <div className="l3OPaLBot">Other Proficiencies & Languages</div>
+                                    <div className="l3OPaL changeBorderColor changeBgColor">
+                                        <textarea name="oPandL" type="text" placeholder="" className="oPandL changeFontColor changeBorderColor" form="saveCharacter" id="oPandL"></textarea>
+                                        <div className="l3OPaLBot changeFontColor">Other Proficiencies & Languages</div>
                                     </div>
                                 </div>
                             </div>
@@ -828,7 +981,7 @@ const CharacterSheet = () => {
                                     <input name="aniButOpa" type="text" placeholder="" form="saveCharacter" id="aniButOpa"></input>
                                     <input name="aniButCol" type="text" placeholder="" form="saveCharacter" id="aniButCol"></input>
                                 </div> */}
-                                <RB1/>
+                                <RB1 />
                                 <RB2 />
                             </div>
                             {/* <h1>

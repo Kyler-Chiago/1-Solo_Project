@@ -126,6 +126,12 @@ const characterSchema = new Schema({
   bndsTrtInp: {type: String},
   flwsTrtInp: {type: String},
   featTrtInp: {type: String},
+  borderColor: {type: String},
+  fontColor: {type: String},
+  abiScBgCol: {type: String},
+  boxBgCol: {type: String},
+  profButCol: {type: String},
+  exprButCol: {type: String},
 });
 
 module.exports = mongoose.model('Character', characterSchema);

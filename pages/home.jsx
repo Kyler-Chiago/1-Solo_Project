@@ -11,7 +11,7 @@ const Home = () => {
 
                 </div>
                 <div className="homeLeft">
-                    Left
+                    
                 </div>
                 <div className="homeLogo">
                     <img src={dnd5elogo} alt="Image not found" className="homednd5elogo"></img>

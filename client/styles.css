@@ -49,7 +49,7 @@ body {
 .characterSheetNavWrapper {
   /* background-color: yellow; */
   width: 150px;
-  height: 400px;
+  height: 600px;
   grid-column: 2;
   border: 2px solid rgb(255, 255, 255);
   box-sizing: border-box;
@@ -938,7 +938,7 @@ body {
   width: 80%;
   height: 90%;
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid rgb(39, 0, 157);
+  border: 2.5px solid rgb(39, 0, 157);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 20px;
@@ -992,7 +992,7 @@ body {
   width: 90%;
   height: 90%;
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid rgb(39, 0, 157);
+  border: 2.5px solid rgb(39, 0, 157);
   border-radius: 6px;
   display: grid;
   grid-template-columns: 100%;
@@ -1398,7 +1398,7 @@ body {
   grid-column: 2;
   grid-row: 3;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(197, 238, 255);
   border-color: rgba(255, 255, 255, 0.2);
   resize: none;
@@ -1482,7 +1482,7 @@ body {
   grid-column: 2;
   grid-row: 1;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(197, 238, 255);
   border-color: rgba(255, 255, 255, 0.1);
   /* border: 5px; */
@@ -1498,7 +1498,7 @@ body {
   grid-column: 3;
   grid-row: 2;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(197, 238, 255);
   border-color: rgba(255, 255, 255, 0.2);
   resize: none;
@@ -1563,7 +1563,7 @@ body {
 
 .persTrtInp {
   outline: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(197, 238, 255);
   border-color: rgba(255, 255, 255, 0.2);
   resize: none;
@@ -1574,7 +1574,7 @@ body {
 
 .persTrtInpGen {
   outline: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(197, 238, 255);
   border-color: rgba(255, 255, 255, 0.2);
   resize: none;
@@ -1636,11 +1636,16 @@ body {
 .rB2InnerWrapper {
   grid-column: 1/4;
   grid-row: 2/4;
+  
   background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid rgb(39, 0, 157);
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 20px;
+}
+
+.borderColorText {
+  color: rgb(197, 238, 255);
 }
 
 .rB2TextBot {
@@ -1651,11 +1656,16 @@ body {
 
 .featTrtInp {
   outline: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(197, 238, 255);
   border-color: rgba(255, 255, 255, 0.2);
   resize: none;
 }
+
+/* .colorInputStyle {
+  border-radius: 15px;
+  width: 100px;
+} */
 
 /* ------Login------ */
 .centerLogin {
@@ -1952,7 +1962,8 @@ body {
 .homeCharacterContainer {
   grid-column: 3;
   grid-row: 2/5;
-  background-color: aqua;
+  /* background-color: aqua; */
+  background-color: #F09F9C;
   display: grid;
   grid-template-columns: 10px 1fr 10px;
   grid-template-rows: 40px 1fr 10px;
@@ -1964,7 +1975,7 @@ body {
 .homeCharacterScroll {
   grid-column: 2;
   grid-row: 2;
-  background-color: rgb(65, 0, 157);
+  background-color: rgb(35, 0, 83);
   border: 2px solid rgb(0, 0, 0);
   display: flex;
   /* justify-content: center; */
@@ -1990,13 +2001,17 @@ body {
 }
 
 .singleCharacterHome {
-  border: 2px solid rgb(58, 58, 58);
+  /* border: 2px solid rgb(58, 58, 58); */
+  border: 2px solid #642B6B;
   display: grid;
   grid-template-columns: 76px 1fr;
   grid-template-rows: 25% 25% 25% 25%;
   box-sizing: border-box;
   width: 100%;
-  background-color: red;
+  /* background-color: rgb(35, 0, 176); */
+  background-color: #270F36;
+  /* color: rgb(181, 63, 255); */
+  color: #C86B98;
   /* margin-top: 5px; */
   /* margin: 5px; */
   /* text-overflow: ellipsis; */
@@ -2109,7 +2124,7 @@ body {
 .homeCharacterButton {
   grid-column: 2;
   grid-row: 1;
-  background-color: blue;
+  background-color: rgb(103, 0, 34);
   display: grid;
   justify-content: center;
   align-items: center;

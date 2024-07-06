@@ -131,10 +131,14 @@ characterController.createCharacter = async (req, res, next) => {
     bndsTrtInp = '',
     flwsTrtInp = '',
     featTrtInp = '',
+    borderColor = '#27009D', // has to be saved as hexadecimal not rgb
+    fontColor = '#C5EEFF',
+    abiScBgCol = '#0000FF',
+    boxBgCol = '#000000',
+    profButCol = '#002AFF',
+    exprButCol = '#7300D1',
   } = req.body;
 
-  // console.log('acrSklButtonOpacity in cC.cC: ', acrSklButtonOpacity);
-  // console.log('typeof acrSklButtonOpacity in cC.cC: ', typeof acrSklButtonOpacity);
   try {
     const character = await Character.create({
       charName,
@@ -258,10 +262,14 @@ characterController.createCharacter = async (req, res, next) => {
       bndsTrtInp,
       flwsTrtInp,
       featTrtInp,
+      borderColor,
+      fontColor,
+      abiScBgCol,
+      boxBgCol,
+      profButCol,
+      exprButCol,
     });
 
-    console.log('character.acrSklButtonOpacity: ', character.acrSklButtonOpacity);
-    //   console.log('there')
     res.locals.character = character._id;
     return next();
   } catch (err) {
@@ -302,6 +310,8 @@ characterController.getCharacter = async (req, res, next) => {
 };
 
 characterController.updateCharacter = async (req, res, next) => {
+
+  // console.log('at start of characterController.updateCharacter');
   const {
     charName,
     strAbi,
@@ -424,13 +434,20 @@ characterController.updateCharacter = async (req, res, next) => {
     bndsTrtInp,
     flwsTrtInp,
     featTrtInp,
+    borderColor,
+    fontColor,
+    abiScBgCol,
+    boxBgCol,
+    profButCol,
+    exprButCol,
   } = req.body;
-
+  // console.log('after decon of req.body of characterController.updateCharacter');
 
   // console.log('req.body in cC.update: ', req.body)
 
   // console.log('req.body: ', req.body)
   try {
+    // console.log('before id is declared of characterController.updateCharacter');
     let id;
     if (req.body.charId) {
       id = req.body.charId // for the post request in characterSheet
@@ -439,6 +456,7 @@ characterController.updateCharacter = async (req, res, next) => {
     } else {
       id = req.body;
     }
+    // console.log('after id is defined of characterController.updateCharacter');
     // console.log('id before Character.updateOne: ', id);
     // const character = await Character.findOne({_id: id});
     // console.log('character before update: ', character);
@@ -567,12 +585,20 @@ characterController.updateCharacter = async (req, res, next) => {
       bndsTrtInp,
       flwsTrtInp,
       featTrtInp,
+      borderColor,
+      fontColor,
+      abiScBgCol,
+      boxBgCol,
+      profButCol,
+      exprButCol,
     }});
+    // console.log('after character is updated of characterController.updateCharacter');
     // character = await Character.findOne({_id: id});
     // console.log('character after update: ', character);
       // console.log('there')
       // console.log('id after update: ', id)
     res.locals.characterid = id;
+    // console.log('after res locals is set to id of characterController.updateCharacter');
     // console.log("res.locals.characterid: ", res.locals.characterid);
     return next();
   } catch (err) {
@@ -610,7 +636,6 @@ characterController.deleteCharacter = async (req, res, next) => {
     } else {
       id = req.body;
     }
-    console.log('id in cC.deleteCharacter: ', id);
     await Character.deleteOne({"_id": id});
     return next();
   } catch (err) {

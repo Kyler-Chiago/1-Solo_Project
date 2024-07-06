@@ -3,22 +3,22 @@ import React from 'react'
 const RB1 = () => {
     return (
         <div className="rB1">
-            <div className="rB1InnerWrapper changeBorderColor" >
+            <div className="rB1InnerWrapper changeBorderColor changeBgColor" >
                 <div className="persTraitsWrapper changeBorderColor">
-                    <textarea name="persTrtInp" type="text" placeholder="" className="persTrtInp" form="saveCharacter" id="persTrtInp"></textarea>
-                    <div className="perTrtTxt">Personality Traits</div>
+                    <textarea name="persTrtInp" type="text" placeholder="" className="persTrtInp changeFontColor changeBorderColor" form="saveCharacter" id="persTrtInp"></textarea>
+                    <div className="perTrtTxt changeFontColor">Personality Traits</div>
                 </div>
                 <div className="idealsWrapper changeBorderColor">
-                    <textarea name="idlsTrtInp" type="text" placeholder="" className="persTrtInpGen" form="saveCharacter" id="idlsTrtInp"></textarea>
-                    <div className="perTrtTxt">Ideals</div>
+                    <textarea name="idlsTrtInp" type="text" placeholder="" className="persTrtInpGen changeFontColor changeBorderColor" form="saveCharacter" id="idlsTrtInp"></textarea>
+                    <div className="perTrtTxt changeFontColor">Ideals</div>
                 </div>
                 <div className="bondsWrapper changeBorderColor">
-                <textarea name="bndsTrtInp" type="text" placeholder="" className="persTrtInpGen" form="saveCharacter" id="bndsTrtInp"></textarea>
-                <div className="perTrtTxt">Bonds</div>
+                <textarea name="bndsTrtInp" type="text" placeholder="" className="persTrtInpGen changeFontColor changeBorderColor" form="saveCharacter" id="bndsTrtInp"></textarea>
+                <div className="perTrtTxt changeFontColor">Bonds</div>
                 </div>
                 <div className="flawsWrapper changeBorderColor">
-                <textarea name="flwsTrtInp" type="text" placeholder="" className="persTrtInpGen" form="saveCharacter" id="flwsTrtInp"></textarea>
-                <div className="perTrtTxt">Flaws</div>
+                <textarea name="flwsTrtInp" type="text" placeholder="" className="persTrtInpGen changeFontColor changeBorderColor" form="saveCharacter" id="flwsTrtInp"></textarea>
+                <div className="perTrtTxt changeFontColor">Flaws</div>
                 </div>
             </div>
             {/* Using hidden inputs to save the button opacity and color data since idk how else to do it */}
