@@ -311,6 +311,7 @@ characterController.getCharacter = async (req, res, next) => {
 
 characterController.updateCharacter = async (req, res, next) => {
 
+  // console.log('cC.updateCharacter req.body: ', req.body);
   // console.log('at start of characterController.updateCharacter');
   const {
     charName,
@@ -441,6 +442,7 @@ characterController.updateCharacter = async (req, res, next) => {
     profButCol,
     exprButCol,
   } = req.body;
+
   // console.log('after decon of req.body of characterController.updateCharacter');
 
   // console.log('req.body in cC.update: ', req.body)
@@ -456,6 +458,8 @@ characterController.updateCharacter = async (req, res, next) => {
     } else {
       id = req.body;
     }
+
+    // console.log(id);
     // console.log('after id is defined of characterController.updateCharacter');
     // console.log('id before Character.updateOne: ', id);
     // const character = await Character.findOne({_id: id});

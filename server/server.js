@@ -166,6 +166,9 @@ app.post('/getThisCharacter', characterController.getCharacter, (req, res) => {
 })
 
 app.post('/updateCharacter', characterController.updateCharacter, (req, res) => {
+  // For some reason adding the onSubmit and prevent default makes me get a 504 gateway timeout error
+  // whenever I save, or now it doesn't idk
+  
   // console.log('at end of /updateCharacter');
   // const resChar = res.locals.characterid.toString();
   // res.redirect(url.format({
@@ -174,11 +177,8 @@ app.post('/updateCharacter', characterController.updateCharacter, (req, res) => 
   //     "char": resChar,
   //   }
   // }))
-  // return res.status(200);
-  // return console.log('at return of /updateCharacter');
-  // return res.redirect('back');
-  return res.status(200).redirect('back');
-  // return res.send('after updateCharacter');
+  return res.status(200);
+  // return res.status(200).redirect('back');
 })
 
 app.post('/createCharacter', characterController.createCharacter, (req, res) => {

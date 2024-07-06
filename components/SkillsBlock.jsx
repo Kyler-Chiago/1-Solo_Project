@@ -25,18 +25,6 @@ const SkillsBlock = props => {
                             document.getElementById('acrButCol').value = document.getElementById('profButCol').value;
                         }
                     }}></button>
-                    {/* <input type="button" name="acrSklButtonOpacity" id="acrSklButtonOpacity" value={acrSklButtonOpacity} form="saveCharacter" onClick={() => {
-                        let strengthSTButton = document.getElementById('acrSklButtonOpacity');
-                        if (strengthSTButton.style.opacity == "0.7") {
-                            acrSklButtonOpacity = "0"
-                            document.getElementById('acrSklButtonOpacity').style.opacity = "0";
-                            console.log(acrSklButtonOpacity);
-                        } else {
-                            acrSklButtonOpacity = "0.7"
-                            document.getElementById('acrSklButtonOpacity').style.opacity = "0.7";
-                            console.log(acrSklButtonOpacity);
-                        }
-                    }}></input> */}
                 </div>
                 <input name="acrSkl" type="text" placeholder="" className="dexteritySTInput changeFontColor" form="saveCharacter" id="acrSkl"></input>
                 <div className="skillsText changeFontColor">
@@ -315,7 +303,7 @@ const SkillsBlock = props => {
                 </div>
                 <input name="perSkl" type="text" placeholder="" className="dexteritySTInput changeFontColor" form="saveCharacter" id="perSkl"></input>
                 <div className="skillsText changeFontColor">
-                    Perception (Cha)
+                    Perception (Wis)
                 </div>
             </div>
             <div className="midST changeBorderColor changeBgColor">

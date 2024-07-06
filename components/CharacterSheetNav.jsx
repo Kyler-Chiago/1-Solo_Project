@@ -10,6 +10,30 @@ const CharacterSheetNav = props => {
             b: parseInt(result[3], 16)
         } : null;
     }
+
+    // forms by default refresh the page, to prevent that I have to use this way of making the post request
+    const handleSubmit = async (event) => {
+
+        // I think this specifically the preventDefault is what prevents the page from reloading
+        event.preventDefault();
+        let form = document.getElementById('saveCharacter');
+        let elements = form.elements;
+        let data = {};
+        for (let i = 0; i < elements.length; i++) {
+            data[elements[i].name] = elements[i].value
+        }
+        await fetch('/updateCharacter',
+            {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+    }
+
+
     return (
         <div className="characterSheetNavWrapper">
             <form action='/' method='POST'>
@@ -21,9 +45,17 @@ const CharacterSheetNav = props => {
             <form action='/deleteCharacter' method='POST' id="deleteCharacter">
                 <button name="_id" type="submit" value={charId} className="createCharacterButton">Delete Character</button>
             </form>
-            <form action='/updateCharacter' method='POST' id="saveCharacter">
+            {/* Working as long as in server.js it's set to res.redirect('back'), but I want it to work without refreshing */}
+            {/* <form action='/updateCharacter' method='POST' id="saveCharacter">
+                <button name="_id" type="submit" value={charId} className="createCharacterButton">Save Character</button>
+            </form> */}
+            {/* What I'm trying to set up to work, but in handleSubmit body I'll need to pass all the data I need */}
+            <form action='/updateCharacter' method='POST' id="saveCharacter" onSubmit={handleSubmit}>
                 <button name="_id" type="submit" value={charId} className="createCharacterButton">Save Character</button>
             </form>
+            {/* <form action='/updateCharacter' method='POST' id="saveCharacter">
+                <button name="_id" type="submit" value={charId} className="createCharacterButton">Save Character</button>
+            </form> */}
             <div className="borderColorText">Border Color: </div>
             <input name="borderColor" type="color" className="colorInputStyle" id="borderColor" form="saveCharacter" onInput={() => {
                 // let changeColorTest = document.getElementById('changeColorTest')
