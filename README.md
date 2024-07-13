@@ -4,9 +4,13 @@ D&D 5E Character Sheet Solo Project
 VSCode start instructions:
 
 terminal 1:
-sudo service mongodb start\n
-[put in password]\n
+
+sudo service mongodb start
+
+[put in password]
+
 mongosh
 
-terminal 2:\n  
+terminal 2:
+
 npm run dev
